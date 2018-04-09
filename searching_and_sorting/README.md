@@ -1,10 +1,10 @@
 # SEARCHING AND SORTING
 
 ## Searching
-- [x] Linear Search
-- [x] Binary Search
-- [x] Jump Search
-- [ ] Interpolation Search
+- [x] [Linear Search](./linear_search/linear_search.md)
+- [x] [Binary Search](./binary_search/binary_search.md)
+- [x] [Jump Search](./jump_search/jump_search.md)
+- [x] [Interpolation Search](./interpolation_search/interpolation_search.md)
 - [ ] Exponential Search
 - [ ] Ternary Search
 

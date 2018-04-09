@@ -1,10 +1,10 @@
 # BINARY SEARCH
 
 ## Problem
-Find an element `x`, in an array `arr[]` of `n` elements.
+Find an element `x`, in a sorted array `arr[]` of `n` elements.
 
 ## Solution Paradigm
-Divide and Conquer.
+`DIVIDE AND CONQUER`
 
 ## Conceptual Solution
 - Search a `sorted` array through a halving approach

@@ -1,7 +1,7 @@
 # JUMP SEARCH
 
 ## Problem
-Find an element `x`, in an array `arr[]` of `n` elements.
+Find an element `x`, in a sorted array `arr[]` of `n` elements.
 
 ## Solution Paradigm
 `LINEAR`
