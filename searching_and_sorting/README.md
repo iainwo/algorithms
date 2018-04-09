@@ -1,12 +1,14 @@
 # SEARCHING AND SORTING
 
 ## Searching
-- [x] [Linear Search](./linear_search/)
-- [x] [Binary Search](./binary_search/)
-- [x] [Jump Search](./jump_search/)
-- [x] [Interpolation Search](./interpolation_search/)
-- [ ] Exponential Search
-- [ ] Ternary Search
+COMPLETE | ALGO | BIG OMICRON | BIG THETA | BIG OMEGA | SMALL OMICRON | SMALL OMEGA
+--- | --- | --- | --- | --- | --- | ---
+:white_check_mark: | [Linear Search](./linear_search/) | O(n) | | | |
+:white_check_mark: | [Binary Search](./binary_search/) | O(logn) | | | |
+:white_check_mark: | [Jump Search](./jump_search/) | O(sqrt(n))| | | |
+:white_check_mark: | [Interpolation Search](./interpolation_search/) | O(loglogn)* | | | |
+:umbrella: | [Exponential Search](./exponential_search/) | | | | |
+:umbrella: | Ternary Search | | | | |
 
 ## Sorting
 - [ ] Selection Sort
