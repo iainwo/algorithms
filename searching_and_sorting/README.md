@@ -3,7 +3,7 @@
 ## Searching
 COMPLETE | ALGO | BIG OMICRON | BIG THETA | BIG OMEGA | SMALL OMICRON | SMALL OMEGA
 --- | --- | --- | --- | --- | --- | ---
-:white_check_mark: | [Linear Search](./linear_search/) | &Omicron;(n) | &Theta;(n) | &Omega;(n)| |
+:white_check_mark: | [Linear Search](./linear_search/) | &Omicron;(n) | &Theta;(n) | &Omega;(n)| &omicron;(n) | &omega;(n)
 :white_check_mark: | [Binary Search](./binary_search/) | &Omicron;(logn) | | | |
 :white_check_mark: | [Jump Search](./jump_search/) | &Omicron;(&radic;<span style="text-decoration: overline">n</span>)| | | |
 :white_check_mark: | [Interpolation Search](./interpolation_search/) | &Omicron;(loglogn)* | | | |
