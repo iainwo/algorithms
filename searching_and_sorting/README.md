@@ -3,10 +3,10 @@
 ## Searching
 COMPLETE | ALGO | BIG OMICRON | BIG THETA | BIG OMEGA | SMALL OMICRON | SMALL OMEGA
 --- | --- | --- | --- | --- | --- | ---
-:white_check_mark: | [Linear Search](./linear_search/) | O(n) | | | |
-:white_check_mark: | [Binary Search](./binary_search/) | O(logn) | | | |
-:white_check_mark: | [Jump Search](./jump_search/) | O(sqrt(n))| | | |
-:white_check_mark: | [Interpolation Search](./interpolation_search/) | O(loglogn)* | | | |
+:white_check_mark: | [Linear Search](./linear_search/) | &Omicron;(n) | &Theta;(n) | &Omega;(n)| |
+:white_check_mark: | [Binary Search](./binary_search/) | &Omicron;(logn) | | | |
+:white_check_mark: | [Jump Search](./jump_search/) | &Omicron;(<math><msqrt><mi>n</mi></msqrt></math>)| | | |
+:white_check_mark: | [Interpolation Search](./interpolation_search/) | &Omicron;(loglogn)* | | | |
 :umbrella: | [Exponential Search](./exponential_search/) | | | | |
 :umbrella: | Ternary Search | | | | |
 
