@@ -18,14 +18,14 @@ COMPLETE | ALGO | BEST TIMECOMPLEXITY | AVG TIMECOMPLEXITY | WORST TIMECOMPLEXIT
 
 ## Sorting
 COMPLETE | ALGO | BEST TIMECOMPLEXITY | AVG TIMECOMPLEXITY | WORST TIMECOMPLEXITY | WORST SPACE COMPLEXITY
---- | --- | --- | --- | --- | --- | ---
+--- | --- | --- | --- | --- | ---
 :umbrella: | Selection Sort | | | |
 :umbrella: | Bubble Sort | | | |
-:umbrella: | Insertion Sort | |  | |
+:umbrella: | Insertion Sort | | | |
 :umbrella: | Merge Sort | | | |
-:umbrella: | Heap Sort | | |  |
-:umbrella: | Quick Sort | |  | |
-:umbrella: | Radix Sort | |  | |
+:umbrella: | Heap Sort | | | |
+:umbrella: | Quick Sort | | | |
+:umbrella: | Radix Sort | | | |
 :umbrella: | Counting Sort | | | |
 :umbrella: | Bucket Sort | | | |
 :umbrella: | Shell Sort | | | |
