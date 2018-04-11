@@ -9,6 +9,7 @@ COMPLETE | ALGO | BIG OMICRON | BIG THETA | BIG OMEGA | SMALL OMICRON | SMALL OM
 :white_check_mark: | [Interpolation Search](./interpolation_search/) | &Omicron;(loglogn)<sup>[1](#myfootnote1)</sup> | | | |
 :white_check_mark: | [Exponential Search](./exponential_search/) | &Omicron;(logi)<sup>[2](#myfootnote2)</sup> | &Theta;(i) | &Omega;(i) | |
 :umbrella: | Ternary Search | | | | |
+
 <a name="myfootnote1">1</a>: When data is uniformly distributed<br>
 <a name="myfootnote2">2</a>: Where *i* is the index of the search value<br>
 
