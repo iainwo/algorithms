@@ -20,23 +20,10 @@ Find an element `x`, in a sorted array `arr[]` of `n` elements.
 ### Time Complexity
 Is O(logn) timecomplexity - because the input amount is progressively divided/multiplied by a constant amount.
 
-It's timecomplexity can be formalized as:
-```
-T(n) = T(n/2) + c
-```
+| Big Omicron | Big Theta | Big Omega |
+| --- | --- | --- |
+| &Omicron;(logi) | &Theta;(i) | &Omega;(i) |
 
-The recurrence can be resolved using either the `Recurrence Tree Method` or the `Master Method (Case 2)`.
-
-#### Recurrence Tree Method
-```
-TODO
-```
-#### Master Method (Case 2)
-```
-TODO
-```
-
-The solution is &Theta;(logn).
 
 ### Space Analysis
 `Iterative:` &Omicron;(1) - if both the exponential_search component and binary_search are iterative, they will use the space already declared for the searchable array
@@ -44,4 +31,5 @@ The solution is &Theta;(logn).
 `Recursive:` &Omicron;(logn) - if either exponential or binary search components are recursive they will occupy memory equal to the depth of their recursion tree. The memory consumption can be bounded by &Omicron;(logn).
 
 ## Comments
-Asymptotically superior to linear_search.
+- Good for unbounded and infinite arrays, or when the search term can usually be
+found at the beginning of an array
