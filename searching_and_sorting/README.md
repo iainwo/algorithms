@@ -3,7 +3,7 @@
 ## Searching
 
 COMPLETE | ALGO | BEST TIMECOMPLEXITY | AVG TIMECOMPLEXITY | WORST TIMECOMPLEXITY | WORST SPACE COMPLEXITY
---- | --- | :---: | :---: | :---: | :---: | :---:
+--- | --- | --- | --- | --- | --- | ---
 :white_check_mark: | [Linear Search](./linear_search/) | &Omicron;(1) | &Omicron;(n) | &Omicron;(n) | &Omicron;(1)
 :white_check_mark: | [Binary Search](./binary_search/) | &Omicron;(1) | &Omicron;(logn) | &Omicron;(logn) | &Omicron;(logn)<sup>[1](#myfootnote1)</sup>
 :white_check_mark: | [Jump Search](./jump_search/) | &Omicron;(1) | &Omicron;(&radic;<span style="text-decoration: overline">n</span>) | &Omicron;(&radic;<span style="text-decoration: overline">n</span>) | &Omicron;(1)
