@@ -9,7 +9,7 @@ COMPLETE | ALGO | BEST TIMECOMPLEXITY | AVG TIMECOMPLEXITY | WORST TIMECOMPLEXIT
 :white_check_mark: | [Jump Search](./jump_search/) | &Omicron;(1) | &Omicron;(&radic;<span style="text-decoration: overline">n</span>) | &Omicron;(&radic;<span style="text-decoration: overline">n</span>) | &Omicron;(1)
 :white_check_mark: | [Interpolation Search](./interpolation_search/) | &Omicron;(1) | &Omicron;(loglogn)<sup>[2](#myfootnote2)</sup> | &Omicron;(loglogn)<sup>[2](#myfootnote2)</sup> | &Omicron;(1)
 :white_check_mark: | [Exponential Search](./exponential_search/) | &Omicron;(1) | &Omicron;(logi)<sup>[3](#myfootnote3)</sup> | &Omicron;(logi)<sup>[3](#myfootnote3)</sup> | &Omicron;(1)
-:white_check_mark: | [Ternary Search](./ternary_search/) | &Omicron;(1) | <sup>&Omicron;(logn)</sup>[4](#myfootnote4)</sup> | &Omicron;(logn) | &Omicron;(logn)<sup>[1](#myfootnote1)</sup>
+:white_check_mark: | [Ternary Search](./ternary_search/) | &Omicron;(1) | &Omicron;(logn)<sup>[4](#myfootnote4)</sup> | &Omicron;(logn) | &Omicron;(logn)<sup>[1](#myfootnote1)</sup>
 
 <a name="myfootnote2">1</a>: When using recursion; otherwise &Omicron;(1)<br>
 <a name="myfootnote2">2</a>: When data is uniformly distributed<br>
@@ -19,7 +19,7 @@ COMPLETE | ALGO | BEST TIMECOMPLEXITY | AVG TIMECOMPLEXITY | WORST TIMECOMPLEXIT
 ## Sorting
 COMPLETE | ALGO | BEST TIMECOMPLEXITY | AVG TIMECOMPLEXITY | WORST TIMECOMPLEXITY | WORST SPACE COMPLEXITY
 --- | --- | --- | --- | --- | ---
-:umbrella: | Selection Sort | | | |
+:white_check_mark: |[Selection Sort](./selection_sort/) | &Omega;(n<sup>2</sup>) | &Theta;(n<sup>2</sup>) | &Omicron;(n<sup>2</sup>) | &Omicron;(1)
 :umbrella: | Bubble Sort | | | |
 :umbrella: | Insertion Sort | | | |
 :umbrella: | Merge Sort | | | |
