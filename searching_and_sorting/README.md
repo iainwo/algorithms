@@ -22,7 +22,7 @@ COMPLETE | ALGO | BEST TIMECOMPLEXITY | AVG TIMECOMPLEXITY | WORST TIMECOMPLEXIT
 :white_check_mark: | [Selection Sort](./selection_sort/) | &Omega;(n<sup>2</sup>) | &Theta;(n<sup>2</sup>) | &Omicron;(n<sup>2</sup>) | &Omicron;(1)
 :white_check_mark: | [Bubble Sort](./bubble_sort/) | &Omega;(n) | &Theta;(n<sup>2</sup>) | &Omicron;(n<sup>2</sup>) | &Omicron;(1)
 :white_check_mark: | [Insertion Sort](./insertion_sort/) | &Omega;(n) | &Theta;(n<sup>2</sup>) | &Omicron;(n<sup>2</sup>) | &Omicron;(1)
-:umbrella: | Merge Sort | | | |
+:white_check_mark: | [Merge Sort](./merge_sort/) | &Omega;(logn) | &Theta;(nlogn) | &Omicron;(nlogn) | &Omicron;(n)
 :umbrella: | Heap Sort | | | |
 :umbrella: | Quick Sort | | | |
 :umbrella: | Radix Sort | | | |

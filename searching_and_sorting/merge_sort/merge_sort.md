@@ -62,7 +62,26 @@ O(nlogn)
 T(n) = T(n/2) + THETA(n)
 ```
 
+This can be solved by either the `recurrence tree method` or the `Master` method.
+
+#### Recurrence Tree Method
+```
+TODO
+```
+
+#### Master Method (Case 2)
+```
+TODO
+```
+
+
 ## Spatial-Complexity
-Depending on the efficiency of the implementation this can either be `O(nlogn)` or `THETA(n)`.
+Depending on the efficiency of the implementation this can either be `O(nlogn)` or `THETA(n)`. Usually `O(n)` and not in-place.
 
 ## Comment
+- merge_sort is particularly good for `linked lists`.
+  - merging can occur in `O(1)` space, since the linked list can be re-referenced
+  - merge_sort operates over contiguous ranges, where linked lists suit sequential iteration
+  - merge_sort is less suited to arrays because it frequently uses insert operations and arrays have an expensive insert cost
+
+- on the flipside `quick_sort` is complimentary to arrays; as it favours random access; and linked lists conversely, do not.
