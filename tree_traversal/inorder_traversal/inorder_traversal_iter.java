@@ -1,5 +1,6 @@
-import java.util.Set;
-import java.util.HashSet;
+import java.util.List;
+import java.util.Stack;
+import java.util.Arrays;
 import java.lang.IllegalArgumentException;
 public class InorderTraversal{
 
@@ -16,7 +17,7 @@ public class InorderTraversal{
         
         Node parent = new Node(leftOne, rightOne, "1");
         
-        InorderTraversal.inorderTraversalV1(rightThree, new HashSet<Node>());
+        InorderTraversal.inorderTraversalIter(rightThree);
      }
      
      static class Node {
@@ -52,33 +53,34 @@ public class InorderTraversal{
          for (; null != retNode.parent; retNode = retNode.parent);
          return retNode;
      }
-     public static void inorderTraversalV1(Node n, Set<Node> visited) {
-         Node root = getRoot(n);
-         InorderTraversal.inorderTraversalV1Helper(root, visited);
-     }
-     /**
+     
+    /**
       * Algorithm,
       * 1. Traverse left subtree inorder
       * 2. Visit root
       * 3. Traverse right subtree inorder
       */
-     private static void inorderTraversalV1Helper(Node n, Set<Node> visited) {
-         if (null == visited) throw new IllegalArgumentException("visited ds empty");
+     public static void inorderTraversalIter(Node n) {
+         Node root = getRoot(n);
          
-         boolean isVisited = false;
-         isVisited = visited.add(n);
+         Stack<Node> work = new Stack();
+         work.push(root);
          
-         if (null != n) {
-            if (null != n.left && !visited.contains(n.left)) 
-                inorderTraversalV1Helper(n.left, visited);
-            
-            System.out.println(n);
-            
-            if (null != n.right && !visited.contains(n.right)) 
-                inorderTraversalV1Helper(n.right, visited);
-            
-            if (null != n.parent && !visited.contains(n.parent))
-                inorderTraversalV1Helper(n.parent, visited);
-         }    
-    }
+         Stack<Node> inorder = new Stack();
+         
+         while (null != work && !work.empty()) {
+             Node curr = work.pop();
+             
+             /* sequence the output */
+             inorder.push(curr);
+             
+             /* sequence the discovery */
+             if (null != curr)
+                 if (null != curr.left)  work.push(curr.left);
+                 if (null != curr.right) work.push(curr.right);
+         }
+         
+         while (null != inorder && !inorder.empty())
+            System.out.println(inorder.pop());
+     }
 }

@@ -1,10 +1,11 @@
-import java.util.Set;
-import java.util.HashSet;
+import java.util.Queue;
+import java.util.LinkedList;
+import java.util.Arrays;
 import java.lang.IllegalArgumentException;
-public class InorderTraversal{
+public class LevelorderTraversal{
 
-     public static void main(String []args){
-        System.out.println("Beginning InorderTraversal.");
+     public static void main(String[] args){
+        System.out.println("Beginning LevelorderTraversal.");
         
         Node leftTwo = new Node("4");
         Node rightTwo = new Node("5");
@@ -16,7 +17,7 @@ public class InorderTraversal{
         
         Node parent = new Node(leftOne, rightOne, "1");
         
-        InorderTraversal.inorderTraversalV1(rightThree, new HashSet<Node>());
+        LevelorderTraversal.levelorderTraversalIter(rightThree);
      }
      
      static class Node {
@@ -52,33 +53,39 @@ public class InorderTraversal{
          for (; null != retNode.parent; retNode = retNode.parent);
          return retNode;
      }
-     public static void inorderTraversalV1(Node n, Set<Node> visited) {
-         Node root = getRoot(n);
-         InorderTraversal.inorderTraversalV1Helper(root, visited);
+     
+     private static Queue getNextLevel(Queue<Node> candidates) {
+         Queue<Node> retLevel = new LinkedList<>();
+         
+         for (Node parent : candidates) {
+             if (null != parent) {
+                 if (null != parent.left)
+                    retLevel.add(parent.left);
+                if (null != parent.right)
+                    retLevel.add(parent.right);
+             }
+         }
+         
+         return retLevel;
      }
-     /**
+    /**
       * Algorithm,
-      * 1. Traverse left subtree inorder
-      * 2. Visit root
-      * 3. Traverse right subtree inorder
+      * 1. Traverse left subtree postorder
+      * 2. Traverse right subtree postorder
+      * 3. Visit root
+      * 
+      * NOTE: does not run preorder from Root!
       */
-     private static void inorderTraversalV1Helper(Node n, Set<Node> visited) {
-         if (null == visited) throw new IllegalArgumentException("visited ds empty");
-         
-         boolean isVisited = false;
-         isVisited = visited.add(n);
-         
-         if (null != n) {
-            if (null != n.left && !visited.contains(n.left)) 
-                inorderTraversalV1Helper(n.left, visited);
-            
-            System.out.println(n);
-            
-            if (null != n.right && !visited.contains(n.right)) 
-                inorderTraversalV1Helper(n.right, visited);
-            
-            if (null != n.parent && !visited.contains(n.parent))
-                inorderTraversalV1Helper(n.parent, visited);
-         }    
-    }
+     public static void levelorderTraversalIter(Node n) {
+        Node root = getRoot(n);
+        
+        Queue<Node> level = new LinkedList<>();
+        level.add(root);
+        
+        while (null != level && !level.isEmpty()) {
+            for (Node i : level) System.out.println(i);
+            level = getNextLevel(level);
+        }
+        
+     }
 }

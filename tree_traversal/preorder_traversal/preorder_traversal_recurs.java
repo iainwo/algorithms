@@ -1,10 +1,11 @@
 import java.util.Set;
 import java.util.HashSet;
+import java.util.Arrays;
 import java.lang.IllegalArgumentException;
-public class InorderTraversal{
+public class PreorderTraversal{
 
-     public static void main(String []args){
-        System.out.println("Beginning InorderTraversal.");
+     public static void main(String[] args){
+        System.out.println("Beginning PreorderTraversal.");
         
         Node leftTwo = new Node("4");
         Node rightTwo = new Node("5");
@@ -16,7 +17,7 @@ public class InorderTraversal{
         
         Node parent = new Node(leftOne, rightOne, "1");
         
-        InorderTraversal.inorderTraversalV1(rightThree, new HashSet<Node>());
+        PreorderTraversal.preorderTraversalRecurs(rightThree);
      }
      
      static class Node {
@@ -52,33 +53,38 @@ public class InorderTraversal{
          for (; null != retNode.parent; retNode = retNode.parent);
          return retNode;
      }
-     public static void inorderTraversalV1(Node n, Set<Node> visited) {
-         Node root = getRoot(n);
-         InorderTraversal.inorderTraversalV1Helper(root, visited);
-     }
-     /**
+     
+    /**
       * Algorithm,
       * 1. Traverse left subtree inorder
       * 2. Visit root
       * 3. Traverse right subtree inorder
+      * 
+      * NOTE: does not run preorder from Root!
       */
-     private static void inorderTraversalV1Helper(Node n, Set<Node> visited) {
-         if (null == visited) throw new IllegalArgumentException("visited ds empty");
-         
-         boolean isVisited = false;
-         isVisited = visited.add(n);
-         
+     public static void preorderTraversalRecurs(Node n) {
+        Node root = getRoot(n);
+        root = n;
+        PreorderTraversal.preorderTraversalRecursHelper(root, new HashSet<Node>());
+     }
+     
+     private static void preorderTraversalRecursHelper(Node n, Set<Node> visited) {
          if (null != n) {
-            if (null != n.left && !visited.contains(n.left)) 
-                inorderTraversalV1Helper(n.left, visited);
-            
+            visited.add(n);
             System.out.println(n);
             
-            if (null != n.right && !visited.contains(n.right)) 
-                inorderTraversalV1Helper(n.right, visited);
-            
+            if (null != n.left && !visited.contains(n.left))
+                PreorderTraversal.preorderTraversalRecursHelper(
+                    n.left,
+                    visited);
+            if (null != n.right && !visited.contains(n.right))
+                PreorderTraversal.preorderTraversalRecursHelper(
+                    n.right,
+                    visited);
             if (null != n.parent && !visited.contains(n.parent))
-                inorderTraversalV1Helper(n.parent, visited);
-         }    
+                PreorderTraversal.preorderTraversalRecursHelper(
+                    n.parent,
+                    visited);
+         }
     }
 }
