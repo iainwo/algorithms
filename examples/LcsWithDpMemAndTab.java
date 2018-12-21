@@ -1,5 +1,9 @@
 import java.lang.StringBuilder;
 
+/**
+ * based on this article,
+ * https://www.ics.uci.edu/~eppstein/161/960229.html
+ */
 public class LongestCommonSubsequence {
     public static void main(String[] args) {
         LongestCommonSubsequence.find("a", "a");
