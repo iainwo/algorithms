@@ -10,14 +10,57 @@ public class UnbalancedBST<T extends Comparable<T>> {
             bst.add(Integer.toString(i));
         
         bst.print();
+        
+        for (int i=0; i<50; i++)
+            bst.remove(Integer.toString(i));
+            
+        bst.print();
+        
+        for (int i=0; i<25; i++)
+            bst.remove(Integer.toString(110-i));
+            
+        bst.print();
     }
     
     Node<T> root; // root
     int n; // element count
     
+    private void splice(Node<T> u) {
+        Node<T> s, p;
+        
+        if (null != u.getLeft()) s = u.getLeft();
+        else s = u.getRight();
+        
+        if (u == root) {
+            root = s;
+            p = null; // root has no parent
+        } else {
+            p = u.getParent();
+            
+            if (p.getLeft() == u) p.setLeft(s);
+            else p.setRight(s);
+        }
+        
+        if (null != s) s.setParent(p);
+        
+        n--; // decrement the count
+    }
+    public void remove(T x) {
+        Node<T> u = findLast(x);
+        if (null != u) remove(u);
+    }
+    private void remove(Node<T> u) {
+        if (null == u.getLeft() || null == u.getRight())
+            splice(u);
+        else {
+            Node<T> b = u.getRight();
+            while (null != b.getLeft()) b = b.getLeft();
+            u.setData(b.getData());
+            splice(b);
+        }
+    }
     public boolean add(T x) {
         Node<T> p = findLast(x);
-        
         return addChild(p, new Node<T>(x));
     }
     private Node<T> findLast(T x) {
@@ -49,6 +92,10 @@ public class UnbalancedBST<T extends Comparable<T>> {
     
     public void print() {
         if (null != root) root.print();
+    }
+    
+    public UnbalancedBST() {
+        root = null;
     }
     static class Node<T extends Comparable<T>> {
         private Node<T> l, r, p;
