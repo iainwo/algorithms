@@ -95,18 +95,23 @@ L = I(k - 1) + 1
 ```
 
 ### Binary Tree Leaves are (1) Greater than T
+```
 L = T + 1
+```
 
 Read - the number of nodes with k-ary children plus one is equal to the number
 of Leaves.
 
 When the root is a Leaf,
+```
 1 = 0 + 1
 1 = 1
 
 :. L = T + 1
+```
 
 When root is an internal node with (2) Children,
+```
 E dgr(v) = 2|E|
 L + (T - 1)(k + 1) + k = 2|E|
 L + (T - 1)(k + 1) + k = 2(L + T - 1)
@@ -120,9 +125,9 @@ L = T(k - 1) + 1
 L = T(k - 1) + 1
 L = T(2 - 1) + 1 // if k=2
 L = T + 1 // if k=2
-
-- OR -
-
+```
+Or,
+```
 E dgr(v) = 2|E|
 L + (T-1)*3 + (S-1)*2 + 2 = 2|E|
 L + (T-1)*3 + (S-1)*2 + 2 = 2(L + T + S - 1)
@@ -133,8 +138,10 @@ T - 3 = L - 2
 T = L + 1
 
 :. L = T + 1
+```
 
 When root has one Child,
+```
 E drg(v) = 2|E|
 L + T*3 + S*2 + 1 = 2|E|
 L + T*3 + S*2 + 1 = 2(L + S + T + 1 - 1)
@@ -144,39 +151,46 @@ T + S*2 + 1 = L + 2(S)
 T + 1 = L
 
 :. L = T + 1
+```
 
 ## Sample Questions
 
 https://www.geeksforgeeks.org/gate-gate-cs-2015-set-3-question-35/
 Consider a binary tree T that has 200 leaf nodes. Then, the number of nodes in T that have exactly two children are _________.
+```
 (A) 199
 (B) 200
 (C) Any number between 0 and 199
 (D) Any number between 100 and 200
 
 Answer: (A)
+```
 
 https://www.geeksforgeeks.org/gate-gate-cs-2015-set-2-question-20/
 A binary tree T has 20 leaves. The number of nodes in T having two children is
+```
 (A) 18
 (B) 19
 (C) 17
 (D) Any number between 10 and 20
 
-Answer: (B) 
+Answer: (B)
+```
 
 https://www.geeksforgeeks.org/gate-gate-cs-2005-question-36/
-In a complete k-ary tree, every internal node has exactly k children. The number of leaves in such a tree with n internal nodes is
+In a complete k-ary tree, every internal node has exactly k children. The number of leaves in such a tree with n internal nodes is.
+```
 (A) nk
 (B) (n – 1)k + 1
 (C) n(k – 1) + 1
 (D) n(k – 1)
 
-
 Answer: (C)
+```
 
 https://www.geeksforgeeks.org/gate-gate-cs-2010-question-12/
 In a binary tree with n nodes, every node has an odd number of descendants. Every node is considered to be its own descendant. What is the number of nodes in the tree that have exactly one child?
+```
 (A) 0
 (B) 1
 (C) (n-1)/2
@@ -184,12 +198,15 @@ In a binary tree with n nodes, every node has an odd number of descendants. Ever
 
 
 Answer: (A)
+```
 
 https://www.geeksforgeeks.org/gate-gate-cs-2007-question-43/
 A complete n-ary tree is a tree in which each node has n children or no children. Let I be the number of internal nodes and L be the number of leaves in a complete n-ary tree. If L = 41, and I = 10, what is the value of n?
+```
 (A) 3
 (B) 4
 (C) 5
 (D) 6
 
-Answer: (C) 
+Answer: (C)
+```
