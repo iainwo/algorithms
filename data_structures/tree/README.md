@@ -1,7 +1,10 @@
 # TREE DATASTRUCTURES
+> _Notes based on [opendatastructures.org][1]._
 
 Tree structures are the formation and relation of Nodes.
 Nodes is data which has references to a parent Node and Children Nodes.
+
+![A node's proximal references.][node_world_view]
 
 Tree Nodes have one parent and can have many Children Nodes.
 
@@ -10,6 +13,8 @@ This Parent Node is the `Root` Node.
 The Children Nodes which have Parent Nodes but do not have any Children Nodes
 of their own, are each known as a `Leaf` and collectively as `Leaves` of the
 Tree.
+
+![An exemplary tree][binary_tree]
 
 A `Subtree` refers to a Parent Node and it's Children Nodes - and their Children
 Nodes. A Subtree is rooted at this Parent Node; a relative root.
@@ -210,3 +215,7 @@ A complete n-ary tree is a tree in which each node has n children or no children
 
 Answer: (C)
 ```
+
+[1]: http://www.opendatastructures.org
+[node_world_view]: http://opendatastructures.org/ods-java/img2593.png
+[binary_tree]: http://opendatastructures.org/ods-java/img2596.png
