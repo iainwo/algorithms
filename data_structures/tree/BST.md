@@ -146,4 +146,9 @@ Space,
 > `BST` - `O(n)`<br>
 > `Skiplist` - `O(n*logn)`
 
+## Considerations
+- Does the dataset require hierarchies -> `BST` might apply
+- Should BST store parent pointer nodes? If Searching is only being done - dont' need (wastes space); however makes it hard to traverse without a stack or recursion, insertion/deletion becomes complex in `Balanced BST`s.
+- storing node references can be done with explicit Node pointers or an Array. 
+
 [1]: http://www.opendatastructures.org
