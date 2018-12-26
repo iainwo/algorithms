@@ -180,5 +180,6 @@ Space,
 > > 1. With probability <b>u.left.size/(u.size-1)</br>, we perform a right rotation at <b>u</b>, making <b>u.left</b> the root of the subtree that was formerly rooted at <b>u</b>.
 > > 2. With probability <b>u.righit.size/(u.size-1)</b>, we perform a left rotation at <b>u</b>, making <b>u.right</b> the root of the subtree that was formerly rooted at <b>u</b>.
 
+[1]: http://www.opendatastructures.org
 [treap_example]: http://opendatastructures.org/ods-java/img2973.png
 [treap_rotations]: http://opendatastructures.org/ods-java/img3012.png
