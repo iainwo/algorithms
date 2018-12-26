@@ -189,9 +189,4 @@ Space,
 > > other structures consume only `O(n)` to keep balance
 > > > `Scapegoat` may work with operations applied to a set which can not be achieved in O(1) operation. The rebuild phase can be hijacked to serve this purpose, so as to reap economies of scale - when iterating through the data-structure
 
-
-
-
-
-
 [1]: http://www.opendatastructures.org
