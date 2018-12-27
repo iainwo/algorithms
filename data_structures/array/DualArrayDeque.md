@@ -134,4 +134,7 @@ function | best case | worst case
 > `add(i,x)`, `remove(i)` are __O(1 + min{n - i, i})__ <br>
 > - `m` calls to add/remove will results in __O(m)__ amortized cost of `balance()` operation.
 
+Space,
+- Space is `O(n)`
+
 [1]: http://www.opendatastructures.org
