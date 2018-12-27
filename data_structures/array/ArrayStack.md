@@ -113,5 +113,29 @@ Time,
 Space,
 > `O(n)`
 
+## Considerations
+- Can use language features to speed up algos; java `System.arraycopy(a, 0, b, 0, n)`
+```java
+    void resize() {
+        T[] b = newArray(Math.max(2*n,1));
+        System.arraycopy(a, 0, b, 0, n);
+        a = b;
+    }
+    void add(int i, T x) {
+        if (i < 0 || i > n) throw new IndexOutOfBoundsException();
+        if (n + 1 > a.length) resize();
+        System.arraycopy(a, i, a, i+1, n-i); 
+        a[i] = x;
+        n++;
+    }
+    T remove(int i) {
+        if (i < 0 || i > n - 1) throw new IndexOutOfBoundsException();
+        T x = a[i];
+        System.arraycopy(a, i+1, a, i, n-i-1);
+        n--; 
+        if (a.length >= 3*n) resize();
+        return x;
+    }
+```
 
 [1]: http://www.opendatastructures.org
