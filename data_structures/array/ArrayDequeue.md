@@ -73,6 +73,7 @@ That is, quick access to both ends.
 
 Time,
 > `get(i)`, `set(i)` operate in `O(1)` <br>
+> can `addFirst(x)`, `removeFirst()`, `addLast(x)`, `removeLast(x)` in `O(1)`
 > `add(i,x)`, `remove(i)` operate in `O(1 + min{i, n-i})`
 > > a sequence of `m` add/remove calls will result in `O(m)` amortized cost
 
