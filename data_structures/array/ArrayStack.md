@@ -106,7 +106,7 @@ The total cost to all calls of `resize()` is,
 ## Time and Space Complexity
 Time,
 > `get(i)`, `set(i)` is `O(1)`. <br>
-> can `get()`, `push(x)`, `pop()` top of stack in `O(1)`
+> can `get()`, `push(x)`, `pop()` top of stack in `O(1)` <br>
 > `add(i,x)`, `remove(i)` is `O(1 + n - i)` <br>
 > any sequence of `add(i,x)` and `remove(i)` operations results in a total of O(m) time spent during all calls to `resize()` <br>
 > > efficient way to implement a Stack. In particular, we can implement `push(x)` as `add(n,x)` and `pop()` as `remove(n-1)`, in which case these operations will run in `O(1)` amortized time
