@@ -1,5 +1,8 @@
 # ALGORITHMS & DATA-STRUCTURES
 Study of algorithms and data-structures
+> _[opendatastructures.org][1] was used to produce this content. Thank you so much!_ <br>
+> _[brilliant.org][2] was used to produce this content. Thank you so much!_ <br>
+> _[blogs.msdn.microsoft.com][3] was used to produce this content. Thank you so much!_
 
 ![Complexity Chart][0]
 
@@ -7,7 +10,7 @@ Study of algorithms and data-structures
 
 Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Access | Worst Search | Worst Insertion | Worst Delete | Worst Space
 :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-[Array Stack](data_structures/array/) | $`\colorbox{lightgreen} {O(1)}`$ | O(n0) | $`\colorbox{gold} {O(n)}`$<sup>A</sup> | $`\colorbox{gold} {O(n)}`$$<sup>A</sup> | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{gold} {O(n)}`$ | $`\colorbox{gold} {O(n)}`$<sup>A</sup> | $`\colorbox{gold} {O(n)}`$<sup>A</sup> | $`\colorbox{gold} {O(n)}`$
+[Array Stack](data_structures/array/) | $`\colorbox{lightgreen} {O(1)}`$ | O(n0) | $`\colorbox{gold} {O(n)}`$<sup>A</sup> | $`\colorbox{gold} {O(n)}`$<sup>A</sup> | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{gold} {O(n)}`$ | $`\colorbox{gold} {O(n)}`$<sup>A</sup> | $`\colorbox{gold} {O(n)}`$<sup>A</sup> | $`\colorbox{gold} {O(n)}`$
 [Rootish Array Stack](data_structures/array/rootish_array_stack/) | $`\colorbox{lightgreen} {O(1)}`$ | _$`\colorbox{gold} {O(n)}`$_ | _$`\colorbox{gold} {O(n)}`$_ | _$`\colorbox{gold} {O(n)}`$_ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{gold} {O(n)}`$ | $`\colorbox{gold} {O(n)}`$ | $`\colorbox{gold} {O(n)}`$ | __O(n + sqrt(n))__
 [Array Queue](data_structures/array/array_queue/) | $`\colorbox{lightgreen} {O(1)}`$ | _$`\colorbox{gold} {O(n)}`$_ | _$`\colorbox{gold} {O(n)}`$_ | _$`\colorbox{gold} {O(n)}`$_ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{gold} {O(n)}`$ | $`\colorbox{gold} {O(n)}`$ | $`\colorbox{gold} {O(n)}`$ | _$`\colorbox{gold} {O(n)}`$_
 [Array Deque](data_structures/array/array_deque/) | $`\colorbox{lightgreen} {O(1)}`$ | _$`\colorbox{gold} {O(n)}`$_ | _$`\colorbox{gold} {O(n)}`$_ | _$`\colorbox{gold} {O(n)}`$_ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{gold} {O(n)}`$ | $`\colorbox{gold} {O(n)}`$ | $`\colorbox{gold} {O(n)}`$ | _$`\colorbox{gold} {O(n)}`$_
@@ -53,3 +56,6 @@ Preorder Traversal | `I`, `R` | O(?) | O(?) | O(?) | O(?)
 > `NRNS` for Non-Recursive Non-Stack Version <br>
 
 [0]: http://i0.wp.com/www.jessicayung.com/wp-content/uploads/2016/08/screenshot-5.png?fit=846%2C591
+[1]: http://www.opendatastructures.org
+[2]: https://brilliant.org/wiki/unrolled-linked-list/
+[3]: https://blogs.msdn.microsoft.com/devdev/2005/08/22/unrolled-linked-lists/

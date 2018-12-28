@@ -1,7 +1,8 @@
 # Unrolled Linked List (Space Efficient List - SEList)
 > _Notes based on [opendatastructures.org][1]._ <br>
 > _Notes based on [brilliant.org][2]._ <br>
-> _Notes based on [blogs.msdn.microsoft.com][3]._
+> _Notes based on [blogs.msdn.microsoft.com][3]._ <br>
+> _Notes based on [linuxjournal.com][4]._
 
 A `Space Efficient List` differs from a `DLList` or `SLList` in that it has more than one data value per node.
 Often each node stores a __block__ of data; this can still be thought of as a list of nodes.
@@ -326,8 +327,10 @@ __O(n)__ | __O(n)__ | __n + O(b + n/b)__
 - Have a low __b__ for quicker add/remove times
 - Have a high __b__ for quicker access times
 - Consider __cache lines__ and if they bottleneck your Random Access
+- In languages which do not have garbage collectors can used XOR-Node Pointers to keep one Node pointer instead of three [XOR-LList][4].
 
 [1]: http://www.opendatastructures.org
 [2]: https://brilliant.org/wiki/unrolled-linked-list/
 [3]: https://blogs.msdn.microsoft.com/devdev/2005/08/22/unrolled-linked-lists/
 [4]: http://opendatastructures.org/ods-java/img1346.png
+[5]: https://www.linuxjournal.com/article/6828
