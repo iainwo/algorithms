@@ -156,12 +156,52 @@ In the case of adding to the end of a SEList and all the blocks are full - or no
 ```
 
 In the general case, when a blocks is full,
-1. Case I.
+1. Case I. - Locate another bucket
     1. Find the block $`b_{k}`$ which the addition is for
     2. Starting after $`b_{k}`$, search in $`(s+1 \leq b)`$ steps for block that is not full where, $`\text{blocksize} \leq (b + 1)`$.
-    3. Globally - respective of all blocks to the right of the insertion block, migrate a single block element from one block into the following block. There will be $`s`$ migrations, one per each of the $`b_{(s+1) - 1} `$ blocks which were full before the $`b_{s+1}`$ block which is not full. This will create space in the block we want to add to, while creating space previously and recursively in the blocks following it.
+    3. __Redistribute__. Globally - respective of all blocks to the right of the insertion block $`b_{k}`$, migrate a single block element from one block into the following block. There will be $`s`$ migrations, one per each of the $`b_{(s+1) - 1} `$ blocks which were full before the $`b_{s+1}`$ block which is not full. This will create space in the block we want to add to, while creating space previously and recursively in the blocks following it.
     4. Add value to $`b_{k}`$
-2.
+2. Case II. - No Empties
+    1. Find the block $`b_{k}`$ which the addition is for
+    2. Starting after $`b_{k}`$, search in $`(s+1 \leq b)`$ steps for block that is not full where, $`\text{blocksize} < (b + 1)`$. and find that there are no empty blocks between $`b_{k}`$ and $`b_{\min (\lceil n/b \rceil, \lfloor n/b \rfloor +1)}`$.
+    3. Add a new block
+    4. And re-distribute.
+    5. Insert.
+3. Case III.
+    1. 1. Find the block $`b_{k}`$ which the addition is for
+    2. Starting after $`b_{k}`$, search $`(b)`$ times that all blocks following blocks have $`\text{blocksize} = (b + 1)`$. and find that there are no empty blocks.
+    3. Create new block at the end of the List
+    4. Redistribute every blocks contents so that each block has only $`b`$ elements.
+    5. Add element
+```java
+    void add(int i, T x) {
+        if (i < 0 || i > n) throw new IndexOutOfBoundsException();
+        if (i == n) {
+            add(x);
+            return;
+        }
+        Location l = getLocation(i);
+        Node u = l.u;
+        int r = 0;
+        while (r < b && u != dummy && u.d.size() == b+1) {
+            u = u.next;
+            r++;
+        }
+        if (r == b) {      // b blocks each with b+1 elements
+            spread(l.u);
+            u = l.u;
+        } 
+        if (u == dummy) {  // ran off the end - add new node
+            u = addBefore(u);
+        }
+        while (u != l.u) { // work backwards, shifting elements
+            u.d.add(0, u.prev.d.remove(u.prev.d.size()-1));
+            u = u.prev;
+        }
+        u.d.add(l.j, x);
+        n++;
+    }
+```
 
 [1]: http://www.opendatastructures.org
 [2]: https://brilliant.org/wiki/unrolled-linked-list/
