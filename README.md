@@ -14,7 +14,7 @@ Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Acc
 [Double Array Deque](data_structures/array/double_array_deque/) | __O(1)__ | _O(n)_ | _O(n)_ | _O(n)_ | __O(1)__ | O(n) | O(n) | O(n) | _O(n)_
 [Singly Linked List](data_structures/linked_list/singly_linked_list/) | _O(n)_ | _O(n)_ | __O(1)__ | __O(1)__ | O(n) | O(n) | __O(1)__ | __O(1)__ | _O(n)_
 [Doubly Linked List](data_structures/linked_list/doubly_linked_list/) | _O(n)_ | _O(n)_ | __O(1)__ | __O(1)__ | O(n) | O(n) | __O(1)__ | __O(1)__ | _O(n)_
-[Unrolled Linked List](data_structures/linked_list/unrolled_linked_list/) | _O(n)_ | _O(n)_ | __O(1)__ | __O(1)__ | O(n) | O(n) | __O(1)__ | __O(1)__ | _O(n)_
+[Unrolled Linked List](data_structures/linked_list/unrolled_linked_list/) | _O(b)_<sup>A</sup> | _O(b)_<sup>A</sup> | __O(b)__<sup>A</sup> | __O(b)__<sup>A</sup> | O(b)<sup>A</sup> | O(b)<sup>A</sup> | __O(b)__<sup>A</sup> | __O(b)__<sup>A</sup> | _O(n)_
 [Chained Hash Table](data_structures/hash_table/chained_hash_table/) | _N/A_ | __O(1)__ | __O(1)__ | __O(1)__ | N/A | O(n) | O(n) | O(n) | _O(n)_
 [Linear Probing Table](data_structures/hash_table/linear_probing_hash_table/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 [Object Hash Table](data_structures/hash_table/object_hash_table/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
@@ -26,6 +26,7 @@ Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Acc
 [Randomized Binary Search Tree](data_structures/tree/randomized_binary_search_tree/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 [Scapegoat Tree](data_structures/tree/scapegoat_tree/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 [Treap](data_structures/tree/treap/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
+> - O(x)<sup>A</sup> - means amortized
 
 ## ALGORITHMS
 
