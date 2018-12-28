@@ -33,8 +33,8 @@ Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Acc
 
 Graph | addEdge | removeEdge | hasEdge | inEdge | outEdge | space
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
-[Adjacency Matrix](data_structures/graph/adjacency_matrix/) | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{red} {O(n**2)}`$ 
-[Adjacency Lists](data_structures/graph/adjacency_lists/) | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{yellow} {O(n + m)}`$ 
+[Adjacency Matrix](data_structures/graph/adjacency_matrix/) | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$ |  $`\colorbox{red} {O(n**2)}`$ 
+[Adjacency Lists](data_structures/graph/adjacency_lists/) | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{yellow} {O(m)}`$ | $`\colorbox{yellow} {O(m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{yellow} {O(n + m)}`$ 
 > all asymptotic analysises are for worst case<br>
 > - `n` is the number of vertices<br>
 > - `m` is the number of edges
