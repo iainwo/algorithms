@@ -5,27 +5,27 @@ Study of algorithms and data-structures
 
 ## DATA STRUCTURES
 
-Status | Structure | Implementation | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Access | Worst Search | Worst Insertion | Worst Delete | Worst Space
-:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-:sunny: | Array | Array Stack | O(1) | O(n) | O(n) | O(n) | O(1) | O(n) | O(n) | O(n) | O(n)
-:sunny: | Array | Array Queue | O(1) | O(n) | O(n) | O(n) | O(1) | O(n) | O(n) | O(n) | O(n)
-:sunny: | Array | Array Deque | O(1) | O(n) | O(n) | O(n) | O(1) | O(n) | O(n) | O(n) | O(n)
-:sunny: | Array | Double Array Deque | O(1) | O(n) | O(n) | O(n) | O(1) | O(n) | O(n) | O(n) | O(n)
-:partly_sunny: | Array | Rootish Array Stack | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(n + sqrt(n))
-:sunny: | LinkedList | Singly Linked List (SLList) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:sunny: | LinkedList | Doubly Linked List (DLList) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:umbrella: | LinkedList | Unrolled Linked List (SEList) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:sunny: | Hash Table | Chained Hash Table - Multiplicative Hashing | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:sunny: | Hash Table | Linear Probing Table - Tabulation Hashing | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:sunny: | Hash Table | Hash Table - String & Object Keys | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:umbrella: | Trie | Trie | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:umbrella: | Heap | Binary Heap | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:umbrella: | Heap | Meldable Heap | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:sunny: | Tree | Binary Tree - Unbalanced | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:sunny: | Tree | Binary Search Tree (BST) - Unbalanced | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:umbrella: | Tree | Randomized Binary Search Tree (Randomized BST) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:umbrella: | Tree | Scapegoat Tree | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
-:umbrella: | Tree | Treap | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Access | Worst Search | Worst Insertion | Worst Delete | Worst Space
+:--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
+[Array Stack](data_structures/array/array_stack/) | O(1) | O(n) | O(n) | O(n) | O(1) | O(n) | O(n) | O(n) | O(n)
+[Array Queue](data_structures/array/array_queue/) | O(1) | O(n) | O(n) | O(n) | O(1) | O(n) | O(n) | O(n) | O(n)
+[Array Deque](data_structures/array/array_deque/) | O(1) | O(n) | O(n) | O(n) | O(1) | O(n) | O(n) | O(n) | O(n)
+Double Array Deque | O(1) | O(n) | O(n) | O(n) | O(1) | O(n) | O(n) | O(n) | O(n)
+Rootish Array Stack | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(n + sqrt(n))
+Singly Linked List (SLList) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Doubly Linked List (DLList) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Unrolled Linked List (SEList) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Chained Hash Table - Multiplicative Hashing | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Linear Probing Table - Tabulation Hashing | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Hash Table - String & Object Keys | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Trie | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Binary Heap | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Meldable Heap | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Binary Tree - Unbalanced | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Binary Search Tree (BST) - Unbalanced | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Randomized Binary Search Tree (Randomized BST) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Scapegoat Tree | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
+Treap | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?) | O(?)
 
 ## ALGORITHMS
 
