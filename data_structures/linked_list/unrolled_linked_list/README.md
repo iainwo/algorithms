@@ -317,9 +317,9 @@ function | best case | worst case | practical worst case
 
 Space,
 
-best case | worst case
-:---: | :---:
-__O(n)__ | __O(n)__
+best case | worst case | practical case
+:---: | :---: | :---:
+__O(n)__ | __O(n)__ | __n + O(b + n/b)__
 
 ## Considerations
 - What do you need quicker add/remove times or quicker access times
