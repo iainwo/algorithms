@@ -45,7 +45,7 @@ With the concepts mentioned before an __SEList__ has these attributes,
 ```
 
 ## Benefits of an SEList
-`SEList` addresses the hardware related problem of __cache lines__ in addition to offering better __space or time__ - via algorithmic tradeoffs of the blocksize and it's impace on _search(x)_, _add(i,x)_, _remove(i,x)_.
+`SEList` addresses the hardware related throughput problem of __cache lines__ in addition to offering better __space and access versus random insertion/deletion__ - via algorithmic tradeoffs of the blocksize and it's impact on _get(i)_, _set(i,x)_, _add(i,x)_, _remove(i,x)_.
 
 ### Cache Lines
 
@@ -168,7 +168,7 @@ In the general case, when a blocks is full,
     4. And re-distribute.
     5. Insert.
 3. Case III.
-    1. 1. Find the block $`b_{k}`$ which the addition is for
+    1. Find the block $`b_{k}`$ which the addition is for
     2. Starting after $`b_{k}`$, search $`(b)`$ times that all blocks following blocks have $`\text{blocksize} = (b + 1)`$. and find that there are no empty blocks.
     3. Create new block at the end of the List
     4. Redistribute every blocks contents so that each block has only $`b`$ elements.
@@ -202,6 +202,130 @@ In the general case, when a blocks is full,
         n++;
     }
 ```
+
+## Remove from SEList
+When removing it is possible that the removal will cause a block to fall below capacity $`\bold{blocksize \pm1}`$.
+
+When the block falls below capacity there are these solutions
+1. Case I - _Steal from Peter to pay Paul_
+    1. Find the block $`b_{k}`$ which the removal is for
+    2. Starting after $`b_{k}`$, search in $`(s+1 \leq b)`$ steps for block $`b_{z}`$ that has capacity where, $`\text{blocksize} \geq b`$.
+    3. __Redistribute__. Globally - respective of all blocks to the left of the block $`b_{z}`$ with extra capactiy, migrate a single block element from the next block into the current block. There will be $`s`$ migrations, one per each of the $`s`$ blocks which capacity of $`| b_{k+j} | = b - 1`$ before the $`b_{s+1}`$ block of a size $`| b_{z} | > b`$ . This will maintain the density invariant in the block we want to remove from, and all of the blocks which follow, once we perform the removal.
+    4. Remove the item.
+2. Case II - _Veni, Vidi, Vici_
+    1. Find the block $`b_{k}`$ which the removal is for
+    2. Starting after $`b_{k}`$, search in $`(s+1 \leq b)`$ steps for block $`b_{z}`$ that has capacity where, $`\text{blocksize} \geq b`$ and find that there is not a block, or that there is not $`(s+1)`$ blocks.
+    3. Same as __Case I__ redistribute. If the last block is under capacity that is ok; the SEList invariant allows this. If the last block is empty - then remove it.
+3. Case III - _Borg: It's Time to Assimilate_
+    1. Find the block $`b_{k}`$ which the removal is for
+    2. Starting after $`b_{k}`$, search $`b`$ times for block $`b_{z}`$ that has capacity where, $`\text{blocksize} \geq b`$ and find that there is not a block.
+        - This means that all blocks have size $`|b_{i}| = b - 1`$
+    3. Take all elements and distribute $`b`$ elements per block, removing the last now-empty block
+    4. Remove the item.
+```java
+    T remove(int i) {
+        if (i < 0 || i > n - 1) throw new IndexOutOfBoundsException();
+        Location l = getLocation(i);
+        T y = l.u.d.get(l.j);
+        Node u = l.u;
+        int r = 0;
+        while (r < b && u != dummy && u.d.size() == b-1) {
+            u = u.next;
+            r++;
+        }
+        if (r == b) {  // b blocks each with b-1 elements
+            gather(l.u);
+        }
+        u = l.u;
+        u.d.remove(l.j);
+        while (u.d.size() < b-1 && u.next != dummy) {
+            u.d.add(u.next.d.remove(0));
+            u = u.next;
+        }
+        if (u.d.isEmpty()) remove(u);
+        n--;
+        return y;
+    }
+```
+
+# Cost Analysis of Gather & Spread
+
+Implemented like,
+```java
+    void spread(Node u) {
+        Node w = u;
+        for (int j = 0; j < b; j++) {
+            w = w.next;
+        }
+        w = addBefore(w);
+        while (w != u) {
+            while (w.d.size() < b)
+                w.d.add(0,w.prev.d.remove(w.prev.d.size()-1));
+            w = w.prev;
+        }
+    }
+```
+```java
+    void gather(Node u) {
+        Node w = u;
+        for (int j = 0; j < b-1; j++) {
+            while (w.d.size() < b)
+                w.d.add(w.next.d.remove(0));
+            w = w.next;
+        }
+        remove(w);
+    }
+```
+
+Both the inner and outer loops have a number of operations which are $`<= b + 1`$.
+This means that nesting will produce a runtime of $`\Omicron(b^2)`$.
+
+Every block can have a capacity of $`\{ (b - 1), b, (b + 1) \}`$ elements - except for the last block which is free.
+
+Define $`\Phi = \sum_{\mathclap{i=0}}^b size(b - b_{i})`$
+
+Posit `add(i, x)` or `remove(i)` decreases $`\Phi`$ by $`1`$.
+Posit that `spread(u)` and `gather(u)` happen when $`\Phi = \sum^b size(b-1)`$ or $`\Phi = \sum^b size(b+1)`$
+Posit after `spread(u)` and `gather(u)` has $`\Phi = \sum^b size(b)`$
+
+If `spread(u)` or `gather(u)` was just called, then in order to be recalled the current $`\Phi_{i}`$ must change to $`\Phi_{i-1}`$ or $`\Phi_{i+1}`$
+
+The number of operations __q__ to get to any of $`\{ \Phi_{i-i}, \Phi_{i+1}`$ from $`\Phi_{i}`$ is either,
+1. $`q = \Phi_{i+1} - \Phi_{i}`$, meaning $`q = (\Phi_{i+1} - \Phi_{i}) / \Phi_{add(i, x)}`$
+2. $`q = \Phi_{i} - \Phi_{i-1}`$, meaning $`q = (\Phi_{i} - \Phi_{i-1}) / \Phi_{remove(i)}`$
+
+Since $`1 = \Phi_{add(i, x)} = \Phi_{remove(i)}`$, __q__ is equal to $`(\Phi_{i+1} - \Phi_{i})/1`$
+Meaning there are $`\pm b`$ operations between `gather(u)` and `spread(u)` calls.
+
+This means that $`\Omicron(b^2)`$ is amortized with $`b`$ operations per `add(i,x)` or `remove(i)` call.
+
+Therefor if there are $`1 <= m`$ calls to `add(i,x)` or `remove(i)` there is at most $`\Omicron(bm)`$ comuptations aggregated across the $`\{ add(i,x), remove(i), spread(u), gather(u) \}`$ operations.
+$`\Box`$
+
+## Time and Space Complexity
+Time,
+
+function | best case | worst case | practical worst case
+--- | :---: | :---: | :---:
+`get(i)` | O(1) | __O(b)__<sup>A</sup> | _O(1 + min{i, n-i}/b)_<sup>A</sup>
+`set(i,x)` | O(1) | __O(b)__<sup>A</sup> | _O(1 + min{i, n-i}/b)_<sup>A</sup>
+`add(i,x)` | O(1) | __O(b)__<sup>A</sup> | _O(b + min{i, n-i}/b)_<sup>A</sup>
+`remove(i)` | O(1) | __O(b)__<sup>A</sup> | _O(b + min{i, n-i}/b)_<sup>A</sup>
+`find(x)` | O(1) | __O(b)__<sup>A</sup> | _O(1 + min{i, n-i}/b)_<sup>A</sup>
+> - __O(x)__<sup>A</sup> - means amortized <br>
+> - If there are $`1 <= m`$ calls to `add(i,x)` or `remove(i)` there is at most $`\Omicron(bm)`$ comuptations aggregated across the $`\{ add(i,x), remove(i), spread(u), gather(u) \}`$ operations.
+
+Space,
+
+best case | worst case
+:---: | :---:
+__O(n)__ | __O(n)__
+
+## Considerations
+- What do you need quicker add/remove times or quicker access times
+- Have a low __b__ for quicker add/remove times
+- Have a high __b__ for quicker access times
+- Consider __cache lines__ and if they bottleneck your Random Access
 
 [1]: http://www.opendatastructures.org
 [2]: https://brilliant.org/wiki/unrolled-linked-list/
