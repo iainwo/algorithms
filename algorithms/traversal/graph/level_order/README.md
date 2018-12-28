@@ -42,5 +42,22 @@ Here is a glimpse of how a Graph is traversed!
 
 ![Glimpse of Traversal][2]
 
+## Time and Space Complexity
+Time,
+
+best case | worst case | practical worst case
+:---: | :---: | :---:
+O(n + m) | __O(n + m)__ | _O(n + m)
+> Iterating through `n` vertices is linear<br>
+> Iterating through `m` edges, segmented per adjacency list is linear<br>
+
+Space,
+
+best case | worst case | practical case
+:---: | :---: | :---:
+__O(n)__ | __O(n)__ | __O(n)__
+> in the case the queuing is occupied by the total number of nodes<br>
+> the boolean visited array - is okay size, would require  $`(n / 8) bytes`$
+
 [1]: http://www.opendatastructures.org
 [2]: http://opendatastructures.org/ods-java/img4647.png
