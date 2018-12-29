@@ -69,6 +69,7 @@ In code,
 - Since the product is positive if $`a^{\prime}(x_{0}, ..., x_{n}) = a^{\prime}(y_{0}, ..., y_{n})`$, then $`0 = product - z_{i}(x_{i} - y_{i})`$ for only one value.
 - Since $`z_{i}`$ is a odd $`2^w`$ bit integer that is mutually independent of the other __z__ values and the independent of the hash input values the probability that $`z_{i}`$ acts as the correct root (solves the equation) is $`\Pr {0 = product - z_{i}(x_{i} - y_{i})} = 1/(2^w)`$
 
+- Next map $`a^{\prime}(x) \to hash(x)`$ and also map $`a^{\prime}(y) \to hash(y)`$, the only cases which $`hash(x) = hash(y)`$ is when the modular truncation (of the deltas, x-y) produces a range of all zeroes or all 1s in it. This is because $`2^w`$ as a div value means that any retained product after the div must be $`\gt 2^w`$; consequently there are thus only $`2^{2w} - 2^w`$ bit fields and therefor the opportunity for that range to be all 1s or 0s is only two cases - whereas the total possible values are $`2^w `$. That means that the $`\Pr { hash(x) = hash(y) } = 2/2^w`$ - 2 cases divided by all the other $`2^{2w}`$ possibilities.
 
 
 [1]: http://www.opendatastructures.org

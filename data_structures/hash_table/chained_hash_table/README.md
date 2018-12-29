@@ -146,7 +146,7 @@ Therefor the quality by which two items from set $`\{ U \}`$ are remapped to the
 
 The hash function as previously described, after it's randomness and bounds manipulations, will extract the trunc of some larger hash value. The reason for extracting this trunc, is to constrain the returned hash value to a certain dimension size, which corresponds with the number of available hash indices in the hash table's underlying storage data type. Due to this dimensionality reduction two different hash values may end up coinciding with the same hash index (truncated hash value) due to what range of bits are truncated.
 
-So two numbers can hash to the same val, because of terminal truncation; and this occurrence happens with a certain frequency per hash value (due to the gaussian distribution). That frequency/probability is equivalent and bijectively the same as the number of x,y pairs which difference produce truncated ranges without any values in them - where $`hash(x) \eq hash(y)`$.
+So two numbers can hash to the same val, because of terminal truncation; and this occurrence happens with a certain frequency per hash value (due to the gaussian distribution). That frequency/probability is equivalent and bijectively the same as the number of x,y pairs which difference produce truncated ranges without any values in them - where $`hash(x) = hash(y)`$.
 
 The only possible outcomes of differencing two elements with the same hashes produce these trunc ranges,
 - $`0000 0000 ... 0000`$ - of size __d__
@@ -164,7 +164,7 @@ z(x-y)\mod2^w = zq2^r\mod2^w
 > note __q__ is an odd non-zero value, this ensures that their is only one distinct modded value. If the odd var `q` is not present there can be multiple colliding hash values for different values of __z__ - potentially even the same.
 
 The only cases where teh truncated value can be 1s or 0s is when $`r`$,
-1. $`r \eq 2^{w-d}`$ in which case the bit value of index $`d+1`$ is a `1` bit and the range of bits from $`[2^w, 2^{w-1}, .., 2^{w-d-1}]`$ are also all 1s. There are $`w-(w-d-1) \eq (d-1)`$ bits in that range, and therefor $`2^{d-1}`$ possibilities and thus,
+1. $`r = 2^{w-d}`$ in which case the bit value of index $`d+1`$ is a `1` bit and the range of bits from $`[2^w, 2^{w-1}, .., 2^{w-d-1}]`$ are also all 1s. There are $`w-(w-d-1) = (d-1)`$ bits in that range, and therefor $`2^{d-1}`$ possibilities and thus,
 ```math
 = 1/(2^{d-1})
 = \frac{2}{2} * \frac{1}{2^{d-1}}
@@ -173,7 +173,7 @@ The only cases where teh truncated value can be 1s or 0s is when $`r`$,
 > In this case when two hash functions are congruent by a factor of two which is equal to $`2^r`$ the probability of hash collisions is $`\Pr\{\frac{2}{2^d}\}`$
 2. When $`r \lt 2^{w-d}`$ meaning hash differences can produces 0s or 1s in their trunc, and means that this applies to hash keys which have a binary factor smaller than $`2^{w-d}`$. The probability of this is $`\Pr \{\frac{1}{2^d}\} + \Pr \{\frac{1}{2^d}\}`$ because 1s truncs of size $`2^{w-d}`$ is the same as 0s.
 
-These are the only two cases. Therefor chances of collision in arithmetic hashing are, for $`x,y \in U = \{0, 1, ..., (2^w-1) \}`$,
+These are the only two cases - AND - these cases are mutually exclusive when $`r`$ is a particular width. Hashing for an entire array will use the same width, until resizing. $`r`$ can either euqal $`2^{w-d}`$ or it can be $`r \lt 2^{w-d}`$. Therefor chances of collision in arithmetic hashing are, for $`x,y \in U = \{0, 1, ..., (2^w-1) \}`$,
 ```math
 \Pr\{hash(x) = hash(y) \leq 2/2^d\}
 ```
