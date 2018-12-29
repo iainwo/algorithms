@@ -136,11 +136,66 @@ In Java all this sophistication simplifies to a couple bit ops,
 ```
 
 #### Measuring Collision
+When you think about performing a linear transformation on one set to another, in the case the former set is much bigger, the distribution of the transformation can either be normal (gaussian) or otherwise.
 
-Chances of collision in arithmetic hashing are, for $`x,y \in U = \{0, 1, ..., (2^w-1) \}`$,
+If you were to assume the distribution was normal, then you could expect a similar number of set items from the large set, to be allocated per set-item/vector of the new set; and for that similar number to remain a consistent ratio across all vectors of the new set.
+
+Previously stated, the hashing `hash(x)` is the linear transformation which takes a set item from $`\{ U \}`$ and remaps it into a $`V_{i} \in \{ D \}`$ the new set.
+
+Therefor the quality by which two items from set $`\{ U \}`$ are remapped to the same vector in $`\{D\}`$ is based on the generating mechanics of the hash function.
+
+The hash function as previously described, after it's randomness and bounds manipulations, will extract the trunc of some larger hash value. The reason for extracting this trunc, is to constrain the returned hash value to a certain dimension size, which corresponds with the number of available hash indices in the hash table's underlying storage data type. Due to this dimensionality reduction two different hash values may end up coinciding with the same hash index (truncated hash value) due to what range of bits are truncated.
+
+So two numbers can hash to the same val, because of terminal truncation; and this occurrence happens with a certain frequency per hash value (due to the gaussian distribution). That frequency/probability is equivalent and bijectively the same as the number of x,y pairs which difference produce truncated ranges without any values in them - where $`hash(x) \eq hash(y)`$.
+
+The only possible outcomes of differencing two elements with the same hashes produce these trunc ranges,
+- $`0000 0000 ... 0000`$ - of size __d__
+
+However, if you were to express that outcome as a formula, $`z(x-y)\mod2^w = zq2^r\mod2^w`$, the roots of that formula would allow for two trunc ranges,
+- $`0000 0000 ... 0000`$ - of size __d__, when $`x \geq y`$
+- $`1111 1111 ... 1111`$ - of size __d__, when $`x \lt y`$
+
+Enter number theory.
+
+So mentioned earlier in order to measure the degree of collision of hash keys, we can perform a bijective proof based on the frequency which two different hash keys have hash difference of zero. By expressing that possibility of two hash values having a difference of zero, __number theory__ can help us determine which percentages of those hash values have differences of zero - and! This applies across the board, across all colliding hash values; we do not have to calculate the probability of hash collisions per colliding hash value, because 1) the distrobution is gaussian and 2) the congruence expression below and the application of number theory collate the sum of all probabilities.
+```math
+z(x-y)\mod2^w = zq2^r\mod2^w
+```
+> note __q__ is an odd non-zero value, this ensures that their is only one distinct modded value. If the odd var `q` is not present there can be multiple colliding hash values for different values of __z__ - potentially even the same.
+
+The only cases where teh truncated value can be 1s or 0s is when $`r`$,
+1. $`r \eq 2^{w-d}`$ in which case the bit value of index $`d+1`$ is a `1` bit and the range of bits from $`[2^w, 2^{w-1}, .., 2^{w-d-1}]`$ are also all 1s. There are $`w-(w-d-1) \eq (d-1)`$ bits in that range, and therefor $`2^{d-1}`$ possibilities and thus,
+```math
+= 1/(2^{d-1})
+= \frac{2}{2} * \frac{1}{2^{d-1}}
+= \frac{2}{2^d}
+```
+> In this case when two hash functions are congruent by a factor of two which is equal to $`2^r`$ the probability of hash collisions is $`\Pr\{\frac{2}{2^d}\}`$
+2. When $`r \lt 2^{w-d}`$ meaning hash differences can produces 0s or 1s in their trunc, and means that this applies to hash keys which have a binary factor smaller than $`2^{w-d}`$. The probability of this is $`\Pr \{\frac{1}{2^d}\} + \Pr \{\frac{1}{2^d}\}`$ because 1s truncs of size $`2^{w-d}`$ is the same as 0s.
+
+These are the only two cases. Therefor chances of collision in arithmetic hashing are, for $`x,y \in U = \{0, 1, ..., (2^w-1) \}`$,
 ```math
 \Pr\{hash(x) = hash(y) \leq 2/2^d\}
 ```
+
+$`\Box`$
+
+## Time and Space Complexity
+Time,
+
+function | best case | worst case | practical worst case
+--- | :---: | :---: | :---:
+`add(i,x)` | O(1)<sup>E,A</sup> | __O(n)__<sup>E,A</sup> | _O(n)_<sup>E,A</sup>
+`remove(i)` | O(1)<sup>E,A</sup> | __O(n)__<sup>E,A</sup> | _O(n)_<sup>E,A</sup>
+`find(x)` | O(1)<sup>E</sup> | __O(n)__<sup>E</sup> | _O(n)_<sup>E</sup>
+> - __O(x)__<sup>A</sup> - means amortized <br>
+> - If there are $`1 <= m`$ calls to `add(i,x)` or `remove(i)` there is at most $`\Omicron(m)`$ comuptations aggregated across the $`\{ add(i,x), remove(i) \}`$ operations.
+
+Space,
+
+best case | worst case | practical case
+:---: | :---: | :---:
+__O(n)__ | __O(n)__ | __O(n)__
 
 [1]: http://www.opendatastructures.org
 [2]: http://opendatastructures.org/ods-java/img1931.png

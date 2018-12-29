@@ -18,8 +18,8 @@ Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Acc
 [Singly Linked List](data_structures/linked_list/singly_linked_list/) | _$`\colorbox{yellow} {O(n)}`$_ | _$`\colorbox{yellow} {O(n)}`$_ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | _$`\colorbox{yellow} {O(n)}`$_
 [Doubly Linked List](data_structures/linked_list/doubly_linked_list/) | _$`\colorbox{yellow} {O(n)}`$_ | _$`\colorbox{yellow} {O(n)}`$_ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | _$`\colorbox{yellow} {O(n)}`$_
 [Unrolled Linked List](data_structures/linked_list/unrolled_linked_list/) | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {n + O(b + n/b)}`$
-[Chained Hash Table](data_structures/hash_table/chained_hash_table/) | _N/A_ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | N/A | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$ | _$`\colorbox{yellow} {O(n)}`$_
-[Linear Probing Table](data_structures/hash_table/linear_probing_hash_table/) | _N/A_ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | N/A | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$ | _$`\colorbox{yellow} {O(n)}`$_
+[Chained Hash Table](data_structures/hash_table/chained_hash_table/) | _N/A_ | $`\colorbox{lightgreen} {O(1)}`$<sup>E</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | N/A | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | _$`\colorbox{yellow} {O(n)}`$_
+[Linear Probing Table](data_structures/hash_table/linear_probing_hash_table/) | _N/A_ | $`\colorbox{lightgreen} {O(1)}`$<sup>E</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | N/A | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | _$`\colorbox{yellow} {O(n)}`$_
 [Object Hash Table](data_structures/hash_table/object_hash_table/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 [Trie](data_structures/trie/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 [Binary Heap](data_structures/heap/binary_heap/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
@@ -29,7 +29,8 @@ Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Acc
 [Randomized Binary Search Tree](data_structures/tree/randomized_binary_search_tree/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 [Scapegoat Tree](data_structures/tree/scapegoat_tree/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 [Treap](data_structures/tree/treap/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
-> - O(x)<sup>A</sup> - means amortized
+> - <sup>A</sup> - means amortized time<br>
+> - <sup>E</sup> - means expected time
 
 Graph | addEdge | removeEdge | hasEdge | inEdge | outEdge | space
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
