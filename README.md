@@ -65,6 +65,19 @@ Preorder Traversal | `I`, `R` | O(?) | O(?) | O(?) | O(?)
 > `R` for Recursive Version <br>
 > `NRNS` for Non-Recursive Non-Stack Version <br>
 
+## MEMORY
+
+Power of 2 | Exact Value (x) | Approx. Value | XBytes into MB, GB, etc.
+:---: | :---: | :---: | :---:
+7 | 128 | | |
+8 | 256 | | |
+10 | 1024 | 1 Thousand | 1KB |
+16 | 65,536 |  | 64KB |
+20 | 1,048,576 | 1 Million | 1MB |
+30 | 1,073,741,824 | 1 Billion | 1GB |
+32 | 4,294,967,296 | | 4GB
+40 | 1,099,511,627,776 | 1 Trillion | 1TB
+
 [0]: http://i0.wp.com/www.jessicayung.com/wp-content/uploads/2016/08/screenshot-5.png?fit=846%2C591
 [1]: http://www.opendatastructures.org
 [2]: https://brilliant.org/wiki/unrolled-linked-list/
