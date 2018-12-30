@@ -1,6 +1,7 @@
 # Linear Probing Hash Tables (Open Addressing)
 > _Notes based on [opendatastructures.org][1]._ <br>
 > _Notes based on [en.bitcoinwiki.org][2]._ <br>
+> _Notes based on [mathworld.wolfram.com][3]._ <br>
 
 
 Different from Chained Hash Tables, Linear Hash Tables embed their values directly into an array - inline.
@@ -240,3 +241,4 @@ __O(n)__ | __O(n)__ | __O(n)__
 
 [1]: http://www.opendatastructures.org
 [2]: https://en.bitcoinwiki.org/wiki/Tabulation_hashing
+[3]: http://mathworld.wolfram.com/StirlingsApproximation.html
