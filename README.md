@@ -2,8 +2,8 @@
 Study of algorithms and data-structures
 > _[opendatastructures.org][1] was used to produce this content. Thank you so much!_ <br>
 > _[brilliant.org][2] was used to produce this content. Thank you so much!_ <br>
-> _[blogs.msdn.microsoft.com][3] was used to produce this content. Thank you so much!_ <br>
-> _[en.wikipedia.org][4] was used to produce this content. Thank you so much!_
+> _[en.wikipedia.org][4] was used to produce this content. Thank you so much!_ <br>
+> Please __see__ the full list [here](./BIBLIOGRAPHY.md).
 
 ![Complexity Chart][0]
 
@@ -100,5 +100,4 @@ Graph Coloring | Does a Graph `G` admit a proper vertex coloring with `k` colors
 [0]: http://i0.wp.com/www.jessicayung.com/wp-content/uploads/2016/08/screenshot-5.png?fit=846%2C591
 [1]: http://www.opendatastructures.org
 [2]: https://brilliant.org/wiki/unrolled-linked-list/
-[3]: https://blogs.msdn.microsoft.com/devdev/2005/08/22/unrolled-linked-lists/
 [4]: https://en.wikipedia.org/
