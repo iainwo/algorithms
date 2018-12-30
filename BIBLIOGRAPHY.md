@@ -10,4 +10,16 @@ Link | Title | Description
 [1]: http://bigocheatsheet.com/
 [2]: https://brilliant.org/wiki/unrolled-linked-list/
 [3]: https://blogs.msdn.microsoft.com/devdev/2005/08/22/unrolled-linked-lists/
-[4]: http://ressources.unisciel.fr/algoprog/s00aaroot/aa00module1/res/%5BCormen-AL2011%5DIntroduction_To_Algorithms-A3.pdf
+[4]: http://ressources.unisciel.fr/algoprog/s00aaroot/aa00module1/res/%5BCormen-AL2011%5DIntroduction_To_Algorithms-A3.pdf * https://www.ics.uci.edu/~eppstein/161/960229.html
+Notes from - https://www.geeksforgeeks.org/level-order-tree-traversal/
+Notes from - https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+[0]: http://i0.wp.com/www.jessicayung.com/wp-content/uploads/2016/08/screenshot-5.png?fit=846%2C591
+[1]: http://www.opendatastructures.org
+[3]: http://www.cs.rmit.edu.au/online/blackboard/chapter/05/documents/contribute/chapter/05/chaining.html
+[5]: http://www.tcpipguide.com/free/diagrams/bitmasking.png
+[5]: https://www.linuxjournal.com/article/6828
+https://www.geeksforgeeks.org/gate-gate-cs-2005-question-36/
+https://www.geeksforgeeks.org/gate-gate-cs-2007-question-43/
+https://www.geeksforgeeks.org/gate-gate-cs-2010-question-12/
+https://www.geeksforgeeks.org/gate-gate-cs-2015-set-2-question-20/
+https://www.geeksforgeeks.org/gate-gate-cs-2015-set-3-question-35/
