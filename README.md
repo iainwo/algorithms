@@ -45,14 +45,14 @@ Graph | addEdge | removeEdge | hasEdge | inEdge | outEdge | space
 
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
 :--- | :--- | :--- | :---: | :---: | :---: | :---:
-[Bubble Sort](algorithms/sorting/) | | `STABLE`, `IN PLACE` | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{lightgreen} {O(1)}`$
+[Bubble Sort](algorithms/sorting/bubble_sort/) | | `STABLE`, `IN PLACE` | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{lightgreen} {O(1)}`$
+[Insertion Sort](algorithms/sorting/insertion_sort/) | | `STABLE`, `IN PLACE` | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{lightgreen} {O(1)}`$
 Linear Search | | | O(?) | O(?) | O(?) | O(?)
 Binary Search | | | O(?) | O(?) | O(?) | O(?)
 Jump Search | | | O(?) | O(?) | O(?) | O(?)
 Interpolation Search | | | O(?) | O(?) | O(?) | O(?)
 Exponential Search | | | O(?) | O(?) | O(?) | O(?)
 Ternary Search | | | O(?) | O(?) | O(?) | O(?)
-Insertion Sort | | | O(?) | O(?) | O(?) | O(?)
 Selection Sort | | | O(?) | O(?) | O(?) | O(?)
 Merge Sort | | | O(?) | O(?) | O(?) | O(?)
 Heap Sort | | | O(?) | O(?) | O(?) | O(?)
