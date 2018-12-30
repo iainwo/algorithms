@@ -42,4 +42,6 @@ Yes
 
 ## Considerations
 - Simple
-- Great for fixing small errors in $`\approx O(c*n)`$ where $`c`$ is the number of required iterations through the array. 
+- Great for fixing small errors in $`\approx O(c*n)`$ where $`c`$ is the number of required iterations through the array.
+    - great for adjacent out-of-order elements
+    - okay - costs O(n) for non-adjacent elements
