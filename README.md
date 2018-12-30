@@ -2,7 +2,8 @@
 Study of algorithms and data-structures
 > _[opendatastructures.org][1] was used to produce this content. Thank you so much!_ <br>
 > _[brilliant.org][2] was used to produce this content. Thank you so much!_ <br>
-> _[blogs.msdn.microsoft.com][3] was used to produce this content. Thank you so much!_
+> _[blogs.msdn.microsoft.com][3] was used to produce this content. Thank you so much!_ <br>
+> _[en.wikipedia.org][4] was used to produce this content. Thank you so much!_
 
 ![Complexity Chart][0]
 
@@ -78,7 +79,26 @@ Power of 2 | Exact Value (x) | Approx. Value | XBytes into MB, GB, etc.
 32 | 4,294,967,296 | | 4GB
 40 | 1,099,511,627,776 | 1 Trillion | 1TB
 
+## NONDETERMINISTIC POLYNOMIAL
+
+NP-Complete Problem | Description
+--- | ---
+Boolean Satisfiability Problem (SAT) | Whether variables of a given Boolean formula can be solved with `TRUE` and `FALSE` values evaluating to `TRUE`
+Knapsack Problem | To do with combinatorial optimization; given a set of items with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible
+Hamiltonian Path or Cycle | Find a path or cycle which visits every vertice in a Graph only once
+Traveling Salesman | Given a set of cities and their relative distances determine the shortest route to visit all cities and return to original city of departure
+Subgraph Isomorphism | Identify if a graph or its subgraphs are isomorphic of another graph. Generalization of the `Maximum Clique` and `Hamiltonian Cycle`.
+Subset Sum Problem | Given a set of integers, is there a non-empty set which sum to zero. Special case of the `Knapsack Problem` and relevant to `Partition Problem`.
+Clique Problem | Find a clique - a subset of vertices, adjacent to one another, satisfying some criteria. Related to fining the `Maximum Clique`.
+Vertex Cover Problem | The set of vertices where that set is surjectively incident to all edges of the graph
+Independent Set Problem | Set of vertices in a graph where none are adjacent. Related to `Maximal Subset` - where the independent set is not a subset of any other independent set.
+Dominating Set | A subset of vertices V which are adjacent to all the vertices in V which aren't apart of that subset
+Graph Coloring | Does a Graph `G` admit a proper vertex coloring with `k` colors.
+> [notes](np/README.md)
+
+
 [0]: http://i0.wp.com/www.jessicayung.com/wp-content/uploads/2016/08/screenshot-5.png?fit=846%2C591
 [1]: http://www.opendatastructures.org
 [2]: https://brilliant.org/wiki/unrolled-linked-list/
 [3]: https://blogs.msdn.microsoft.com/devdev/2005/08/22/unrolled-linked-lists/
+[4]: https://en.wikipedia.org/
