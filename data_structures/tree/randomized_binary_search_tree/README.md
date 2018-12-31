@@ -10,8 +10,8 @@ The worst case can be proven combinatorially or stochasticlly.
 
 ### Cominatorial Search Path Proof
 There are numerically small numbers of BST insertion sequences which will create an unbalanced binary of `Set {S}`.
-> T(n): is the number of subtrees where there is a run which is > log(n) in length. Where n is the size of the BST<br>
-> T(n) = `Summation of i=logn+1 to n of i! * n choose i`, equates to the number of unbalanced combinations
+> T(n): is the number of subtrees where there is a __run__ which is $`\gt \log{n}`$ in length. Where __n__ is the size of the BST<br>
+> T(n) = $`\displaystyle\sum_{i=\log{n}}^n i! {n \choose i}`$, equates to the number of unbalanced combinations
 
 The number of balanced BST insertion sequences of `Set {S}` are many,
 > F(n): is the number of subtrees where there is a run which is <= log(n) in length. Where n is the size of the BST<br>
@@ -71,8 +71,9 @@ The Probability that `{z}` elements occuring on the path to `x` is,<br>
 ![The probability distribution of {z} being in the path of x][probability_dist]
 
 This distribution yields a probability that the depth of `x` is,
-> `H(x+1) + H(n-x) - O(1)`, when `x` is in BST<br>
-> `H(ceil(x)) + H(n-ceil(x))`, when `x` is not in BST
+> $`E[\text {search path length}] = H(x+1) + H(n-x) - O(1)`$, when $`x \in \{S\}`$<br>
+> $`E[\text {search path length}] = H(\lceil x \rceil) + H(n- \lceil x \rceil)`$, when $`x \notin \{S\}`$
+> > $`\therefore \text{ }\leq 2ln(n) + O(1)`$
 
 ## Time and Space Complexity
 

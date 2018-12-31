@@ -104,6 +104,7 @@ Yes
     - compare returns negative if a<b
     - compare returns positive if a>b,
     - zero if a=b
+- better than quicksort, for large externalized data.
 
 [1]: http://www.opendatastructures.org
 [2]: https://www.geeksforgeeks.org/merge-sort/
