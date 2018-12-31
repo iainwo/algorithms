@@ -47,6 +47,7 @@ Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Spac
 :--- | :--- | :--- | :---: | :---: | :---: | :---:
 [Bubble Sort](algorithms/sorting/bubble_sort/) | | `STABLE`, `IN PLACE` | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{lightgreen} {O(1)}`$
 [Insertion Sort](algorithms/sorting/insertion_sort/) | | `STABLE`, `IN PLACE` | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{lightgreen} {O(1)}`$
+[Merge Sort](algorithms/sorting/merge_sort/) | | `STABLE` | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{yellow} {O(n)}`$
 Linear Search | | | O(?) | O(?) | O(?) | O(?)
 Binary Search | | | O(?) | O(?) | O(?) | O(?)
 Jump Search | | | O(?) | O(?) | O(?) | O(?)
@@ -54,7 +55,6 @@ Interpolation Search | | | O(?) | O(?) | O(?) | O(?)
 Exponential Search | | | O(?) | O(?) | O(?) | O(?)
 Ternary Search | | | O(?) | O(?) | O(?) | O(?)
 Selection Sort | | | O(?) | O(?) | O(?) | O(?)
-Merge Sort | | | O(?) | O(?) | O(?) | O(?)
 Heap Sort | | | O(?) | O(?) | O(?) | O(?)
 Level Order Traversal | `I`, `R` | | O(?) | O(?) | O(?) | O(?)
 Inorder Traversal | `I`, `R`, `NRNS` | | O(?) | O(?) | O(?) | O(?)
