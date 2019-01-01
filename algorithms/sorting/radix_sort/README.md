@@ -38,7 +38,7 @@ Since the algorithm sorts by a radix - the number of passes required to complete
     - w/d - can be thought of as the number of digits in the number
     - 2^d - as the base/radix size
         - if you say the biggest integer is $`n^c`$ then $`log_{2}(n^c) = c*log_{2}n`$ is `w` bits big
-        - if you say $`d = log_{2}(n)`$ then $`O((w/d)(n + 2^d)) = \frac{c*log_{2}(n)}{log_{2}n}*(n + 2^{log_{2}n}`$
+        - if you say $`d = log_{2}(n)`$ then $`O((w/d)(n + 2^d)) = \frac{c*log_{2}(n)}{log_{2}n}*(n + 2^{log_{2}n})`$
             - simplifying to $`= c*(2n) = O(cn)`$
             > when! the width is equivalent to a radix that is congruent with the number range, and that radix is within some `c` order ~= b^c of the biggest number
             > does the number then have to be represented in binary by widths of it's radix?? seems like it
