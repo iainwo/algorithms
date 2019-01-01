@@ -51,6 +51,7 @@ Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Spac
 [Quick Sort](algorithms/sorting/quick_sort/) | | `IN PLACE` | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{lightgreen} {O(1)}`$
 [Heap Sort](algorithms/sorting/heap_sort/) | | `IN PLACE` | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{lightgreen} {O(1)}`$
 [Counting Sort](algorithms/sorting/counting_sort/) | | `STABLE` | $`\colorbox{yellow} {O(n + k)}`$ | $`\colorbox{yellow} {O(n + k)}`$ | $`\colorbox{yellow} {O(n + k)}`$ | $`\colorbox{yellow} {O(n + k)}`$
+[Radix Sort](algorithms/sorting/radix_sort/) | | `STABLE` | $`\colorbox{yellow} {O(cn)}`$ | $`\colorbox{yellow} {O(cn)}`$ | $`\colorbox{yellow} {O(cn)}`$ | $`\colorbox{yellow} {O(n + c)}`$
 Linear Search | | | O(?) | O(?) | O(?) | O(?)
 Binary Search | | | O(?) | O(?) | O(?) | O(?)
 Jump Search | | | O(?) | O(?) | O(?) | O(?)
