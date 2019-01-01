@@ -45,17 +45,18 @@ Structure | addEdge | removeEdge | hasEdge | inEdge | outEdge | space
 
 ## ALGORITHMS
 
-#### SORTING
+#### SORT
 
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
 :--- | :--- | :--- | :---: | :---: | :---: | :---:
-[Bubble Sort](algorithms/sorting/bubble_sort/) | | `STABLE`, `IN PLACE` | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{lightgreen} {O(1)}`$
-[Insertion Sort](algorithms/sorting/insertion_sort/) | | `STABLE`, `IN PLACE` | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{lightgreen} {O(1)}`$
-[Merge Sort](algorithms/sorting/merge_sort/) | | `STABLE` | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{yellow} {O(n)}`$
-[Quick Sort](algorithms/sorting/quick_sort/) | | `IN PLACE` | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{lightgreen} {O(1)}`$
-[Heap Sort](algorithms/sorting/heap_sort/) | | `IN PLACE` | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{lightgreen} {O(1)}`$
-[Counting Sort](algorithms/sorting/counting_sort/) | | `STABLE` | $`\colorbox{yellow} {O(n + k)}`$ | $`\colorbox{yellow} {O(n + k)}`$ | $`\colorbox{yellow} {O(n + k)}`$ | $`\colorbox{yellow} {O(n + k)}`$
-[Radix Sort](algorithms/sorting/radix_sort/) | | `STABLE` | $`\colorbox{yellow} {O(cn)}`$ | $`\colorbox{yellow} {O(cn)}`$ | $`\colorbox{yellow} {O(cn)}`$ | $`\colorbox{yellow} {O(n + c)}`$
+[Bubble Sort](algorithms/sort/bubble_sort/) | | `STABLE`, `IN PLACE` | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{lightgreen} {O(1)}`$
+[Insertion Sort](algorithms/sort/insertion_sort/) | | `STABLE`, `IN PLACE` | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{lightgreen} {O(1)}`$
+[Merge Sort](algorithms/sort/merge_sort/) | | `STABLE` | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{yellow} {O(n)}`$
+[Quick Sort](algorithms/sort/quick_sort/) | | `IN PLACE` | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{red} {O(n**2)}`$ | $`\colorbox{lightgreen} {O(1)}`$
+[Heap Sort](algorithms/sort/heap_sort/) | | `IN PLACE` | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{lightgreen} {O(1)}`$
+[Counting Sort](algorithms/sort/counting_sort/) | | `STABLE` | $`\colorbox{yellow} {O(n + k)}`$ | $`\colorbox{yellow} {O(n + k)}`$ | $`\colorbox{yellow} {O(n + k)}`$ | $`\colorbox{yellow} {O(n + k)}`$
+[Radix Sort](algorithms/sort/radix_sort/) | | `STABLE` | $`\colorbox{yellow} {O(kn)}`$ | $`\colorbox{yellow} {O(kn)}`$ | $`\colorbox{yellow} {O(kn)}`$ | $`\colorbox{yellow} {O(n + k)}`$
+Selection Sort | | | O(?) | O(?) | O(?) | O(?)
 > `STABLE` preserves order of cardinally equivalent values <br>
 > `IN PLACE` no auxiliar memory is used <br>
 
@@ -78,17 +79,16 @@ Preorder Traversal | `I`, `R` | | O(?) | O(?) | O(?) | O(?)
 > `R` for Recursive Version <br>
 > `NRNS` for Non-Recursive Non-Stack Version <br>
 
-#### SEARCHING
+#### SEARCH
 
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
 :--- | :--- | :--- | :---: | :---: | :---: | :---:
+[Binary Search](algorithms/search/binary_search/) | | | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{lightgreen} {O(1)}`$
 Linear Search | | | O(?) | O(?) | O(?) | O(?)
-Binary Search | | | O(?) | O(?) | O(?) | O(?)
 Jump Search | | | O(?) | O(?) | O(?) | O(?)
 Interpolation Search | | | O(?) | O(?) | O(?) | O(?)
 Exponential Search | | | O(?) | O(?) | O(?) | O(?)
 Ternary Search | | | O(?) | O(?) | O(?) | O(?)
-Selection Sort | | | O(?) | O(?) | O(?) | O(?)
 
 ## MEMORY
 
