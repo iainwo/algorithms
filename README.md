@@ -9,6 +9,7 @@ Study of algorithms and data-structures
 
 ## DATA STRUCTURES
 
+#### GENERAL
 Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Access | Worst Search | Worst Insertion | Worst Delete | Worst Space
 :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
 [Array Stack](data_structures/array/array_stack/) | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$<sup>A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>A</sup> | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$<sup>A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>A</sup> | $`\colorbox{yellow} {O(n)}`$
@@ -30,18 +31,21 @@ Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Acc
 [Randomized Binary Search Tree](data_structures/tree/randomized_binary_search_tree/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 [Scapegoat Tree](data_structures/tree/scapegoat_tree/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 [Treap](data_structures/tree/treap/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
-> - <sup>A</sup> - means amortized time<br>
-> - <sup>E</sup> - means expected time
+> <sup>A</sup> - means amortized time<br>
+> <sup>E</sup> - means expected time
 
-Graph | addEdge | removeEdge | hasEdge | inEdge | outEdge | space
+#### GRAPH
+Structure | addEdge | removeEdge | hasEdge | inEdge | outEdge | space
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
 [Adjacency Matrix](data_structures/graph/adjacency_matrix/) | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$ |  $`\colorbox{red} {O(n**2)}`$ 
 [Adjacency Lists](data_structures/graph/adjacency_lists/) | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{yellow} {O(m)}`$ | $`\colorbox{yellow} {O(m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{yellow} {O(n + m)}`$ 
 > all asymptotic analysises are for worst case<br>
-> - `n` is the number of vertices<br>
-> - `m` is the number of edges
+> `n` is the number of vertices<br>
+> `m` is the number of edges
 
 ## ALGORITHMS
+
+#### SORTING
 
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
 :--- | :--- | :--- | :---: | :---: | :---: | :---:
@@ -52,6 +56,32 @@ Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Spac
 [Heap Sort](algorithms/sorting/heap_sort/) | | `IN PLACE` | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{gold} {O(nlog(n))}`$ | $`\colorbox{lightgreen} {O(1)}`$
 [Counting Sort](algorithms/sorting/counting_sort/) | | `STABLE` | $`\colorbox{yellow} {O(n + k)}`$ | $`\colorbox{yellow} {O(n + k)}`$ | $`\colorbox{yellow} {O(n + k)}`$ | $`\colorbox{yellow} {O(n + k)}`$
 [Radix Sort](algorithms/sorting/radix_sort/) | | `STABLE` | $`\colorbox{yellow} {O(cn)}`$ | $`\colorbox{yellow} {O(cn)}`$ | $`\colorbox{yellow} {O(cn)}`$ | $`\colorbox{yellow} {O(n + c)}`$
+> `STABLE` preserves order of cardinally equivalent values <br>
+> `IN PLACE` no auxiliar memory is used <br>
+
+#### GRAPH
+Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
+:--- | :--- | :--- | :---: | :---: | :---: | :---:
+[Graph Breath First Search](algorithms/traversal/graph/breath_first_search/) | [`I`](algorithms/traversal/graph/breath_first_search/README.md) |  | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n)}`$
+[Graph Depth First Search](algorithms/traversal/graph/depth_first_search/) | [`R`](algorithms/traversal/graph/depth_first_search/README.md), [`I`](algorithms/traversal/graph/depth_first_search/README.md) | | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n)}`$
+> `I` for Iterative Version <br>
+> `R` for Recursive Version <br>
+
+#### TREE
+Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
+:--- | :--- | :--- | :---: | :---: | :---: | :---:
+Level Order Traversal | `I`, `R` | | O(?) | O(?) | O(?) | O(?)
+Inorder Traversal | `I`, `R`, `NRNS` | | O(?) | O(?) | O(?) | O(?)
+Postorder Traversal | `I`, `R` | | O(?) | O(?) | O(?) | O(?)
+Preorder Traversal | `I`, `R` | | O(?) | O(?) | O(?) | O(?)
+> `I` for Iterative Version <br>
+> `R` for Recursive Version <br>
+> `NRNS` for Non-Recursive Non-Stack Version <br>
+
+#### SEARCHING
+
+Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
+:--- | :--- | :--- | :---: | :---: | :---: | :---:
 Linear Search | | | O(?) | O(?) | O(?) | O(?)
 Binary Search | | | O(?) | O(?) | O(?) | O(?)
 Jump Search | | | O(?) | O(?) | O(?) | O(?)
@@ -59,17 +89,6 @@ Interpolation Search | | | O(?) | O(?) | O(?) | O(?)
 Exponential Search | | | O(?) | O(?) | O(?) | O(?)
 Ternary Search | | | O(?) | O(?) | O(?) | O(?)
 Selection Sort | | | O(?) | O(?) | O(?) | O(?)
-Level Order Traversal | `I`, `R` | | O(?) | O(?) | O(?) | O(?)
-Inorder Traversal | `I`, `R`, `NRNS` | | O(?) | O(?) | O(?) | O(?)
-Postorder Traversal | `I`, `R` | | O(?) | O(?) | O(?) | O(?)
-Preorder Traversal | `I`, `R` | | O(?) | O(?) | O(?) | O(?)
-[Graph Breath First Search](algorithms/traversal/graph/breath_first_search/) | [`I`](algorithms/traversal/graph/breath_first_search/README.md) |  | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n)}`$
-[Graph Depth First Search](algorithms/traversal/graph/depth_first_search/) | [`R`](algorithms/traversal/graph/depth_first_search/README.md), [`I`](algorithms/traversal/graph/depth_first_search/README.md) | | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n)}`$
-> `I` for Iterative Version <br>
-> `R` for Recursive Version <br>
-> `NRNS` for Non-Recursive Non-Stack Version <br>
-> `STABLE` preserves order of cardinally equivalent values <br>
-> `IN PLACE` no auxiliar memory is used <br>
 
 ## MEMORY
 
