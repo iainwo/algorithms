@@ -81,4 +81,8 @@ Time,
 Space,
 > Uses `O(n)`
 
+## Considerations
+- good for `Prim's MST`
+- good for `Dijkstra's Shortest Path`
+
 [1]: http://www.opendatastructures.org
