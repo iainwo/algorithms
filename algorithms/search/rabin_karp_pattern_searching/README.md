@@ -1,5 +1,6 @@
 # Rabin-Karp Pattern Searching
 > _Notes based on [geeksforgeeks.org][1]._ <br>
+> _Notes based on [cs.cmu.edu][2]._ <br>
 
 This alogrithm finds subpatterns in a data-set.
 
@@ -86,3 +87,4 @@ Here is one implementation, the hashing is based on a very weak version of polyn
 > From [geeksforgeeks.org][1]
 
 [1]: https://www.geeksforgeeks.org/rabin-karp-algorithm-for-pattern-searching/
+[2]: http://www.cs.cmu.edu/afs/cs/academic/class/15451-f14/www/lectures/lec6/karp-rabin-09-15-14.pdf
