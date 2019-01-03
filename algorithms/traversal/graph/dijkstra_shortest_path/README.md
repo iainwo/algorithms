@@ -1,4 +1,5 @@
 # Dijkstra Shortest Path
+> _Notes based on [brilliant.org][1]._ <br>
 
 Find shortest path from source node to target node in weighted graph.
 By creating tree of shortests paths from source vertex to all other points in graph.

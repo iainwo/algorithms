@@ -60,6 +60,17 @@ Selection Sort | | | O(?) | O(?) | O(?) | O(?)
 > `STABLE` preserves order of cardinally equivalent values <br>
 > `IN PLACE` no auxiliar memory is used <br>
 
+#### SEARCH
+
+Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
+:--- | :--- | :--- | :---: | :---: | :---: | :---:
+[Binary Search](algorithms/search/binary_search/) | | | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{lightgreen} {O(1)}`$
+Linear Search | | | O(?) | O(?) | O(?) | O(?)
+Jump Search | | | O(?) | O(?) | O(?) | O(?)
+Interpolation Search | | | O(?) | O(?) | O(?) | O(?)
+Exponential Search | | | O(?) | O(?) | O(?) | O(?)
+Ternary Search | | | O(?) | O(?) | O(?) | O(?)
+
 #### GRAPH
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
 :--- | :--- | :--- | :---: | :---: | :---: | :---:
@@ -67,10 +78,16 @@ Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Spac
 [Graph Depth First Search](algorithms/traversal/graph/depth_first_search/) | [`R`](algorithms/traversal/graph/depth_first_search/README.md), [`I`](algorithms/traversal/graph/depth_first_search/README.md) | | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n)}`$
 [Floyd-Warshal Shortest Path](algorithms/traversal/graph/floyd_warshal_shortest_path/) | | | $`\colorbox{red} {O(v**3)}`$ | $`\colorbox{red} {O(v**3)}`$ | $`\colorbox{red} {O(v**3)}`$ | $`\colorbox{red} {O(v**2)}`$
 [Bellman-Ford Shortest Path](algorithms/traversal/graph/bellman_ford_shortest_path/) | | | $`\colorbox{yellow} {O(e)}`$ | $`\colorbox{red} {O(v*e)}`$ | $`\colorbox{red} {O(v*e)}`$ | $`\colorbox{red} {O(v**2)}`$
+[Dijkstra Shortest Path](algorithms/traversal/graph/dijkstra_shortest_path/) | | | $`\colorbox{red} {O(v**2)}`$ | $`\colorbox{red} {O(v**2)}`$ | $`\colorbox{red} {O(v**2)}`$ | $`\colorbox{red} {O(v**2)}`$
 > `I` for Iterative Version <br>
 > `R` for Recursive Version <br>
 > `v` is for number of vertices
 > `e` is for number of edges
+
+#### DYNAMIC PROGRAMMING
+Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
+:--- | :--- | :--- | :---: | :---: | :---: | :---:
+[Knapsack Problem](algorithms/dynamic_programming/knapsack_problem/) |  |  | $`\colorbox{red} {O(n * weight)}`$ | $`\colorbox{red} {O(n * weight)}`$ | $`\colorbox{red} {O(n * weight)}`$ | $`\colorbox{red} {O(n * weight)}`$
 
 #### TREE
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
@@ -82,17 +99,6 @@ Preorder Traversal | `I`, `R` | | O(?) | O(?) | O(?) | O(?)
 > `I` for Iterative Version <br>
 > `R` for Recursive Version <br>
 > `NRNS` for Non-Recursive Non-Stack Version <br>
-
-#### SEARCH
-
-Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
-:--- | :--- | :--- | :---: | :---: | :---: | :---:
-[Binary Search](algorithms/search/binary_search/) | | | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{lightgreen} {O(1)}`$
-Linear Search | | | O(?) | O(?) | O(?) | O(?)
-Jump Search | | | O(?) | O(?) | O(?) | O(?)
-Interpolation Search | | | O(?) | O(?) | O(?) | O(?)
-Exponential Search | | | O(?) | O(?) | O(?) | O(?)
-Ternary Search | | | O(?) | O(?) | O(?) | O(?)
 
 ## MEMORY
 
