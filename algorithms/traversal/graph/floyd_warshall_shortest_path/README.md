@@ -50,5 +50,7 @@ __O(v**2)__ | __O(v**2)__ | __O(v**2)__
 
 ## Considerations
 - Best for dense graphs, because this algo is not impacted by the number of edges - runtime is determined by number of vertices.
+- Can NOT have negative cycles, or won't be able to calculate shortest distance.
+- Can have negative edges.
 
 [1]: https://brilliant.org/wiki/floyd-warshall-algorithm/
