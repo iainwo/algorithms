@@ -65,8 +65,10 @@ Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Spac
 :--- | :--- | :--- | :---: | :---: | :---: | :---:
 [Graph Breath First Search](algorithms/traversal/graph/breath_first_search/) | [`I`](algorithms/traversal/graph/breath_first_search/README.md) |  | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n)}`$
 [Graph Depth First Search](algorithms/traversal/graph/depth_first_search/) | [`R`](algorithms/traversal/graph/depth_first_search/README.md), [`I`](algorithms/traversal/graph/depth_first_search/README.md) | | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n)}`$
+[Floyd Warshal Shortest Path](algorithms/traversal/graph/floyd_warshal_shortest_path/) | | | $`\colorbox{red} {O(v**3)}`$ | $`\colorbox{red} {O(v**3)}`$ | $`\colorbox{red} {O(v**3)}`$ | $`\colorbox{red} {O(v**2)}`$
 > `I` for Iterative Version <br>
 > `R` for Recursive Version <br>
+> `v` is for number of vertices
 
 #### TREE
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space

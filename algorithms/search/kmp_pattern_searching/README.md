@@ -11,3 +11,5 @@ It does this by observing what comparisons have already determined.
 KMP keeps track of how much of the substring it has already matched. If the rest of the comparison fails, KMP will check if there is any possibility that the current matched substring has any possibility of the pattern recurring in a shorter form (prefix).
 
 It uses the length to do so.
+
+[1]: https://www.ics.uci.edu/~eppstein/161/960227.html
