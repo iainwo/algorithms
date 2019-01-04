@@ -88,6 +88,7 @@ Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Spac
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
 :--- | :--- | :--- | :---: | :---: | :---: | :---:
 [Knapsack Problem](algorithms/dynamic_programming/knapsack_problem/) |  |  | $`\colorbox{red} {O(n * weight)}`$ | $`\colorbox{red} {O(n * weight)}`$ | $`\colorbox{red} {O(n * weight)}`$ | $`\colorbox{red} {O(n * weight)}`$
+[Coin Changing Problem](algorithms/dynamic_programming/coin_changing_problem/) |  |  | $`\colorbox{red} {O(nk)}`$ | $`\colorbox{red} {O(nk)}`$ | $`\colorbox{red} {O(nk)}`$ | $`\colorbox{yellow} {O(n)}`$
 
 #### TREE
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
