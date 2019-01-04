@@ -3,6 +3,7 @@ Study of algorithms and data-structures
 > _[opendatastructures.org][1] was used to produce this content. Thank you so much!_ <br>
 > _[brilliant.org][2] was used to produce this content. Thank you so much!_ <br>
 > _[en.wikipedia.org][4] was used to produce this content. Thank you so much!_ <br>
+> _[comscigate.com][5] was used to produce this content. Thank you so much!_ <br>
 > Please __see__ the full list [here](./BIBLIOGRAPHY.md).
 
 ![Complexity Chart][0]
@@ -89,6 +90,7 @@ Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Spac
 :--- | :--- | :--- | :---: | :---: | :---: | :---:
 [Knapsack Problem](algorithms/dynamic_programming/knapsack_problem/) |  |  | $`\colorbox{red} {O(n * weight)}`$ | $`\colorbox{red} {O(n * weight)}`$ | $`\colorbox{red} {O(n * weight)}`$ | $`\colorbox{red} {O(n * weight)}`$
 [Coin Changing Problem](algorithms/dynamic_programming/coin_changing_problem/) |  |  | $`\colorbox{red} {O(nk)}`$ | $`\colorbox{red} {O(nk)}`$ | $`\colorbox{red} {O(nk)}`$ | $`\colorbox{yellow} {O(n)}`$
+[Longest Increasing Subsequence (LIS)](algorithms/dynamic_programming/longest_increasing_subsequence/) |  |  | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{gold} {O(nlogn)}`$ | $`\colorbox{gold} {O(nlogn)}`$ | $`\colorbox{yellow} {O(n)}`$
 
 #### TREE
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
@@ -136,3 +138,4 @@ Graph Coloring | Does a Graph `G` admit a proper vertex coloring with `k` colors
 [1]: http://www.opendatastructures.org
 [2]: https://brilliant.org/wiki/unrolled-linked-list/
 [4]: https://en.wikipedia.org/
+[5]: http://comscigate.com/Books/contests/icpc.pdf
