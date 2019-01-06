@@ -40,6 +40,29 @@ Overlapping Subproblems is when the problems comprising a larger problem have de
     - Can be though of as the work you have to do to solve all subproblems!
 > From [Nikola Otasevic - Cofounder, Refdash][1]
 
-
+## Longest Common Substring
+1. Check each substring if the substring adjacent is also a match.
+    - repeated subproblems over the same indices
+    - dependent subproblems indices are dependent on solving the same subproblems which use the same indices
+    - global optimum is sum of the local optima (*constrained to adjacency of substrings)
+2. The indices into each string change, indices into String 1, and indices into 2. Can just base of end and use one indice per String for size
+3. `LS(A, B, x, y) = MAX(ROOTED_LS(A, B, x, y), LS(A, B, x-1, y), LS(A, B, x, y-1))`
+4. `A[x] == B[y]` or `A[x] != B[y]`
+5. Recurse is better when substrings are smaller
+    - higher probability of entering "correct recursion"
+    - penalty for recursing is small because the recursive depth and number of recursions is small
+    - memoization combats penalty of "cache-miss" recursion subtrees
+    - only have to pay for the recursions you do, tabulation pays for everything
+    - only use as much memory as you need (stack & hashmap/length table)
+    - code is simpler
+6. Added.
+7. $`O(A*B)`
+    - $`\displaystyle\sum_{a=0}^A\sum_{b=0}^B (1 + a + b - | a - b |)`$
+    > `a + b - | a - b |` returns the minimum of __a__ and __b__
+    - $`A*B + A*B*(B-1)/2 + A(A-1)/2 + \displaystyle\sum_{a=0}^A(B(B-1)/2 -a)`$
+    > `| a - b |` is always positive so can swap the summation from `| a - b |` to `| b - a |`<br>
+    > basically just a sum of sums of B(B-1)/2 less the current iterations a val equaling to a(a-1)/2
+    - $`A*B + A*B*(B-1)/2 + A(A-1)/2 + A*B(B-1)/2 - A(A-1)/2`$
+    - $`O(A*B)`$
 
 [1]: https://www.quora.com/What-are-the-top-10-most-popular-dynamic-programming-problems-among-interviewers
