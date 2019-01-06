@@ -38,7 +38,7 @@ Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Acc
 #### GRAPH
 Structure | addEdge | removeEdge | hasEdge | inEdge | outEdge | space
 :--- | :---: | :---: | :---: | :---: | :---: | :---:
-[Adjacency Matrix](data_structures/graph/adjacency_matrix/) | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{yellow} {O(V)}`$ | $`\colorbox{yellow} {O(V)}`$ |  $`\colorbox{red} {O(n**2)}`$ 
+[Adjacency Matrix](data_structures/graph/adjacency_matrix/) | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{yellow} {O(V)}`$ | $`\colorbox{yellow} {O(V)}`$ |  $`\colorbox{red} {O(V**2)}`$ 
 [Adjacency Lists](data_structures/graph/adjacency_lists/) | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{yellow} {O(E)}`$ | $`\colorbox{yellow} {O(E)}`$ | $`\colorbox{yellow} {O(E + V)}`$ | $`\colorbox{lightgreen} {O(1)}`$ |  $`\colorbox{yellow} {O(E + V)}`$ 
 > all asymptotic analysises are for worst case<br>
 > `V` is the number of vertices<br>

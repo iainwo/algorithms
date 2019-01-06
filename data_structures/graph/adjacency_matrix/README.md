@@ -84,17 +84,20 @@ Time,
 
 function | best case | worst case | practical worst case
 --- | :---: | :---: | :---:
-`access` | O(1) | __O(1)__ | _O(1)_
-`search` | O(1) | __O(n)__ | _O(1 + min{i, n-i})_
-`insertion` | O(1) | __O(1)__ | _O(1)_
-`deletion` | O(1) | __O(1)__ | _O(1)_
-`find(x)` | O(1) | __O(1)__ | _O(1)_
+`addEdge(i,j)` | O(1) | __O(1)__ | _O(1)_
+`removeEdge(i,j)` | O(1) | __O(1)__ | _O(1)_
+`hasEdge(i,j)` | O(1) | __O(1)__ | _O(1)_
+`outEdges(i)` | O(V) | __O(V)__ | _O(V)_
+`inEdges(i)` | O(V) | __O(V)__ | _O(V)_
+> `E` is the number of edges<br>
+> `V` is the number of vertices
 
 Space,
 
 best case | worst case | practical case
 :---: | :---: | :---:
-$`O(n^2)`$ | $`\bold{O(n^2)}`$ | $`O(n^2)`$
+$`O(V**2)`$ | $`\bold{O(V**2)}`$ | $`O(V**2)`$
+> `V` is the number of vertices
 
 [1]: http://www.opendatastructures.org
 [2]: http://opendatastructures.org/ods-java/img4500.png
