@@ -92,6 +92,7 @@ Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Spac
 [Coin Changing Problem](algorithms/dynamic_programming/coin_changing_problem/) |  |  | $`\colorbox{red} {O(nk)}`$ | $`\colorbox{red} {O(nk)}`$ | $`\colorbox{red} {O(nk)}`$ | $`\colorbox{yellow} {O(n)}`$
 [Longest Increasing Subsequence (LIS)](algorithms/dynamic_programming/longest_increasing_subsequence/) |  |  | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{gold} {O(nlogn)}`$ | $`\colorbox{gold} {O(nlogn)}`$ | $`\colorbox{yellow} {O(n)}`$
 [Minimum Edit Distance](algorithms/dynamic_programming/edit_distance/) | [`T`](algorithms/dynamic_programming/edit_distance/MinEditDistance.java)  |  | $`\colorbox{red} {O(mn)}`$ | $`\colorbox{red} {O(mn)}`$ | $`\colorbox{red} {O(mn)}`$ | $`\colorbox{red} {O(mn)}`$
+[Longest Common Substring](algorithms/dynamic_programming/longest_common_substring/) | [`M`](algorithms/dynamic_programming/longest_common_substring/Sequence.java)  |  | $`\colorbox{red} {O(mn)}`$ | $`\colorbox{red} {O(mn)}`$ | $`\colorbox{red} {O(mn)}`$ | $`\colorbox{red} {O(mn)}`$
 > `T` for Tabular Version <br>
 > `M` for Memoization Version <br>
 
