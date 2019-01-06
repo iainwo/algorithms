@@ -75,8 +75,8 @@ Ternary Search | | | O(?) | O(?) | O(?) | O(?)
 #### GRAPH
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
 :--- | :--- | :--- | :---: | :---: | :---: | :---:
-[Graph Breath First Search](algorithms/traversal/graph/breath_first_search/) | [`I`](algorithms/traversal/graph/breath_first_search/README.md) |  | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n)}`$
-[Graph Depth First Search](algorithms/traversal/graph/depth_first_search/) | [`R`](algorithms/traversal/graph/depth_first_search/README.md), [`I`](algorithms/traversal/graph/depth_first_search/README.md) | | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n)}`$
+[Graph Breath First Search](algorithms/traversal/graph/breath_first_search/) | [`I`](algorithms/traversal/graph/breath_first_search/Graphs.java) |  | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n)}`$
+[Graph Depth First Search](algorithms/traversal/graph/depth_first_search/) | [`R`](algorithms/traversal/graph/depth_first_search/README.md), [`I`](algorithms/traversal/graph/depth_first_search/Graphs.java) | | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n + m)}`$ | $`\colorbox{yellow} {O(n)}`$
 [Floyd-Warshal Shortest Path](algorithms/traversal/graph/floyd_warshall_shortest_path/) | | | $`\colorbox{red} {O(v**3)}`$ | $`\colorbox{red} {O(v**3)}`$ | $`\colorbox{red} {O(v**3)}`$ | $`\colorbox{red} {O(v**2)}`$
 [Bellman-Ford Shortest Path](algorithms/traversal/graph/bellman_ford_shortest_path/) | | | $`\colorbox{yellow} {O(e)}`$ | $`\colorbox{red} {O(v*e)}`$ | $`\colorbox{red} {O(v*e)}`$ | $`\colorbox{red} {O(v**2)}`$
 [Dijkstra Shortest Path](algorithms/traversal/graph/dijkstra_shortest_path/) | | | $`\colorbox{red} {O(v**2)}`$ | $`\colorbox{red} {O(v**2)}`$ | $`\colorbox{red} {O(v**2)}`$ | $`\colorbox{red} {O(v**2)}`$
