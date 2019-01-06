@@ -72,16 +72,21 @@ Time,
 function | best case | worst case | practical worst case
 --- | :---: | :---: | :---:
 `addEdge(i,j)` | O(1) | __O(1)__ | _O(1)_
-`removeEdge(i,j)` | O(1) | __O(n)__ | _O(dgr(i))_
-`hasEdge(i,j)` | O(1) | __O(n)__ | _O(dgr(i))_
+`removeEdge(i,j)` | O(1) | __O(E)__ | _O(dgr(i))_
+`hasEdge(i,j)` | O(1) | __O(E)__ | _O(dgr(i))_
 `outEdges(i)` | O(1) | __O(1)__ | _O(1)_
-`inEdges(i)` | O(1) | __O(m + n)__ | _O(m + n)_
+`inEdges(i)` | O(1) | __O(V + E)__ | _O(V + E)_
+> `E` is the number of edges<br>
+> `V` is the number of vertices<br>
+> `dgr(i)` is the number of edges where __i__ is the source
 
 Space,
 
 best case | worst case | practical case
 :---: | :---: | :---:
-$`O(n^2)`$ | $`\bold{O(n^2)}`$ | $`O(m + n)`$
+$`O(V)`$ | $`\bold{O(E + V)}`$ | $`O(E + V)`$
+> `E` is the number of edges<br>
+> `V` is the number of vertices
 
 ## Considerations
 - what data-structure to use of adjacency lists
