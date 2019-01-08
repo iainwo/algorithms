@@ -17,6 +17,7 @@ Inorder Tree Traversal | [geeksforgeeks.org][7] |
 Title | Link | Description
 :---: | :---: | ---
 CLRS | [ressources.unisciel.fr][4] | Gold Standard Book for Algorithms
+Princeton Algorithms | [algs4.cs.princeton.edu][12] | Princeton Algorithm book on DS & Algorithms
 
 [1]: http://www.opendatastructures.org
 [2]: https://brilliant.org/wiki/unrolled-linked-list/
@@ -36,5 +37,6 @@ CLRS | [ressources.unisciel.fr][4] | Gold Standard Book for Algorithms
 [9]: http://www.tcpipguide.com/free/diagrams/bitmasking.png
 [10]: https://www.linuxjournal.com/article/6828
 [11]: https://www.ics.uci.edu/~eppstein/161/960229.html
+[12]: https://algs4.cs.princeton.edu/44sp/
 
 [100]: http://i0.wp.com/www.jessicayung.com/wp-content/uploads/2016/08/screenshot-5.png?fit=846%2C591
