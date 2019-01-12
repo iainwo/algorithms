@@ -3,6 +3,7 @@ package com.iain.practice;
 import java.util.AbstractQueue;
 import java.util.NoSuchElementException;
 import java.util.Iterator;
+import java.util.Queue;
 
 /**
 * SLList -
@@ -10,8 +11,8 @@ import java.util.Iterator;
 */
 public class SLList<T> extends AbstractQueue<T> {
     public static void main(String[] args) {
-        SLList<String> list = new SLList<>();
-        list.add("abc");
+        Queue<String> list = new SLList<>();
+        list.add("abcd");
         list.size();
         Iterator<String> it = list.iterator();
         while (it.hasNext()) {
@@ -121,6 +122,7 @@ public class SLList<T> extends AbstractQueue<T> {
 	* Get the head of the Queue.
 	* @return the head of the Queue or null if Queue is empty.
 	*/
+	@Override
 	public T poll() {
 		if (0 == n) return null;
 		T y = head.x;
@@ -135,6 +137,7 @@ public class SLList<T> extends AbstractQueue<T> {
 	* @param x the element to add
 	* @return true if successful
 	*/
+	@Override
 	public boolean offer(T x) { return add(x); }
 
 	/**
@@ -142,6 +145,7 @@ public class SLList<T> extends AbstractQueue<T> {
 	* Splice out the head of the Queue.
 	* @return the head of the queue
 	*/
+	@Override
 	public T remove() {
 		if (0 == n) throw new NoSuchElementException();
 	T y = head.x;
@@ -157,6 +161,7 @@ public class SLList<T> extends AbstractQueue<T> {
 	* @param x the element to add
 	* @return true if the operation succeeds
 	*/
+	@Override
 	public boolean add(T x) {
 		Node u = new Node();
 		u.x = x;
@@ -184,5 +189,6 @@ public class SLList<T> extends AbstractQueue<T> {
 	* Get the size of the underlying Queue
 	* @return the number of elements in the queue
 	*/
+	@Override
 	public int size() { return n; }
 }
