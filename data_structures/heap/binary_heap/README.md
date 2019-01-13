@@ -81,6 +81,21 @@ Time,
 Space,
 > Uses `O(n)`
 
+## Time and Space Complexity
+
+Time,
+
+function | best case | worst case
+--- | :---: | :---:
+`add(x)` | O(1) | __O(logn)__
+`remove(x)` | O(1) | __O(logn)__
+
+Space,
+
+best case | worst case
+:---: | :---:
+O(n) | __O(n)__
+
 ## Considerations
 - good for `Prim's MST`
 - good for `Dijkstra's Shortest Path`

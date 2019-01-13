@@ -25,7 +25,7 @@ Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Acc
 [Linear Probing Table](data_structures/hash_table/linear_probing_hash_table/) | _N/A_ | $`\colorbox{lightgreen} {O(1)}`$<sup>E</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | N/A | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | _$`\colorbox{yellow} {O(n)}`$_
 [Object Hash Table](data_structures/hash_table/object_hash_table/) | _N/A_ | $`\colorbox{lightgreen} {O(1)}`$<sup>E</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | N/A | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | _$`\colorbox{yellow} {O(n)}`$_
 [Trie](data_structures/trie/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
-[Binary Heap](data_structures/heap/binary_heap/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
+[Binary Heap](data_structures/heap/binary_heap/) | _O(?)_ | _O(?)_ | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | O(?) | O(?) | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | _$`\colorbox{yellow} {O(n)}`$_
 [Meldable Heap](data_structures/heap/meldable_heap/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 [Binary Tree](data_structures/tree/binary_tree/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 [Binary Search Tree](data_structures/tree/binary_search_tree/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
