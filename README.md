@@ -65,12 +65,14 @@ Selection Sort | | | O(?) | O(?) | O(?) | O(?)
 
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
 :--- | :--- | :--- | :---: | :---: | :---: | :---:
-[Binary Search](algorithms/search/binary_search/) | | | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{lightgreen} {O(1)}`$
+[Binary Search](algorithms/search/binary_search/) | [`I`](algorithms/search/binary_search/BinarySearch.java), [`R`](algorithms/search/binary_search/BinarySearch.java) | | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{lightgreen} {O(1)}`$
 Linear Search | | | O(?) | O(?) | O(?) | O(?)
 Jump Search | | | O(?) | O(?) | O(?) | O(?)
 Interpolation Search | | | O(?) | O(?) | O(?) | O(?)
 Exponential Search | | | O(?) | O(?) | O(?) | O(?)
 Ternary Search | | | O(?) | O(?) | O(?) | O(?)
+> `I` for Iterative Version <br>
+> `R` for Recursive Version <br>
 
 #### GRAPH
 Algorithm | Style | Properties | Best Time | Avg. Time | Worst Time | Worst Space
