@@ -21,9 +21,6 @@ Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Acc
 [Singly Linked List](data_structures/linked_list/singly_linked_list/) | _$`\colorbox{yellow} {O(n)}`$_ | _$`\colorbox{yellow} {O(n)}`$_ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | _$`\colorbox{yellow} {O(n)}`$_
 [Doubly Linked List](data_structures/linked_list/doubly_linked_list/) | _$`\colorbox{yellow} {O(n)}`$_ | _$`\colorbox{yellow} {O(n)}`$_ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{yellow} {O(n)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | $`\colorbox{lightgreen} {O(1)}`$ | _$`\colorbox{yellow} {O(n)}`$_
 [Unrolled Linked List](data_structures/linked_list/unrolled_linked_list/) | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {O(b)}`$<sup>A</sup> | $`\colorbox{yellow} {n + O(b + n/b)}`$
-[Chained Hash Table](data_structures/hash_table/chained_hash_table/) | _N/A_ | $`\colorbox{lightgreen} {O(1)}`$<sup>E</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | N/A | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | _$`\colorbox{yellow} {O(n)}`$_
-[Linear Probing Table](data_structures/hash_table/linear_probing_hash_table/) | _N/A_ | $`\colorbox{lightgreen} {O(1)}`$<sup>E</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | N/A | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | _$`\colorbox{yellow} {O(n)}`$_
-[Object Hash Table](data_structures/hash_table/object_hash_table/) | _N/A_ | $`\colorbox{lightgreen} {O(1)}`$<sup>E</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | N/A | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | _$`\colorbox{yellow} {O(n)}`$_
 [Trie](data_structures/trie/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 [Binary Heap](data_structures/heap/binary_heap/) | _O(?)_ | _O(?)_ | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | O(?) | O(?) | $`\colorbox{yellowgreen} {O(log(n))}`$ | $`\colorbox{yellowgreen} {O(log(n))}`$ | _$`\colorbox{yellow} {O(n)}`$_
 [Meldable Heap](data_structures/heap/meldable_heap/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
@@ -34,6 +31,13 @@ Structure | Avg. Access | Avg. Search | Avg. Insertion | Avg. Delete | Worst Acc
 [Treap](data_structures/tree/treap/) | _O(?)_ | _O(?)_ | _O(?)_ | _O(?)_ | O(?) | O(?) | O(?) | O(?) | O(?)
 > <sup>A</sup> - means amortized time<br>
 > <sup>E</sup> - means expected time
+
+#### DICTIONARY
+Structure | Avg. Search | Avg. Insertion | Avg. Delete | Worst Search | Worst Insertion | Worst Delete | Worst Space
+:--- | :---: | :---: | :---: | :---: | :---: | :---: | :---:
+[Chained Hash Table](data_structures/hash_table/chained_hash_table/) | $`\colorbox{lightgreen} {O(1)}`$<sup>E</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | _$`\colorbox{yellow} {O(n)}`$_
+[Linear Probing Table](data_structures/hash_table/linear_probing_hash_table/) | $`\colorbox{lightgreen} {O(1)}`$<sup>E</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | _$`\colorbox{yellow} {O(n)}`$_
+[Object Hash Table](data_structures/hash_table/object_hash_table/) | $`\colorbox{lightgreen} {O(1)}`$<sup>E</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{lightgreen} {O(1)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | $`\colorbox{yellow} {O(n)}`$<sup>E,A</sup> | _$`\colorbox{yellow} {O(n)}`$_
 
 #### GRAPH
 Structure | addEdge | removeEdge | hasEdge | inEdge | outEdge | space
