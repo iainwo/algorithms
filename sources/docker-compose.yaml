@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  devel:
+    image: "gradle:latest"
+    volumes:
+      - .:/home/gradle/project/
+    working_dir: /home/gradle/project/
+    command: ["gradle", "build", "javadoc"]
+  release:
+    image: "gradle:latest"
+    volumes:
+      - .:/home/gradle/project/
+    working_dir: /home/gradle/project/
+    command: ["gradle", "jar", "javadoc"]

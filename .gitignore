@@ -1,2 +1,4 @@
 tags
 *.swp
+sources/build/
+sources/.gradle/
