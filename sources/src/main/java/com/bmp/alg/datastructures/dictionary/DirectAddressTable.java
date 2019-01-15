@@ -86,6 +86,7 @@ public class DirectAddressTable<T> implements Dictionary<T> {
     T y = a[address(x)];
     a[address(x)] = nil;
     n--;
+    if (a.length >= 3*n) resize();
 
     return (y != nil) ? y : nil;
   }
